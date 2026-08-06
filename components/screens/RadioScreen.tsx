@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Radio, Signal, Hash, Code2 } from 'lucide-react';
+import { Github, Linkedin, Radio, Signal } from 'lucide-react';
 
 const ORBIT_RADIUS = 130; // Radius in pixels
 
@@ -33,7 +33,7 @@ const RadioScreen: React.FC = () => {
         {/* Header */}
         <div className="absolute top-2 sm:top-6 w-full text-center z-30">
              <div className="inline-block border-b-2 border-pip pb-1 px-4">
-                <h2 className="text-xl sm:text-2xl font-bold tracking-[0.3em] uppercase text-pip drop-shadow-[0_0_5px_rgba(65,255,0,0.8)]">
+                <h2 className="text-xl sm:text-2xl font-bold tracking-[0.3em] uppercase text-pip drop-shadow-[0_0_2px_rgba(65,255,0,0.7)]">
                     Pip-Boy Radio
                 </h2>
                 <div className="text-xs tracking-widest text-pip opacity-70">SIGNAL FOUND</div>
@@ -45,7 +45,7 @@ const RadioScreen: React.FC = () => {
             
             {/* The Ring */}
             <div 
-                className="absolute rounded-full border border-[#41ff00]/60 shadow-[0_0_15px_rgba(65,255,0,0.4),0_0_30px_rgba(65,255,0,0.15)]"
+                className="absolute rounded-full border border-pip/60 shadow-[0_0_4px_rgba(65,255,0,0.4)]"
                 style={{ 
                     width: `${ORBIT_RADIUS * 2}px`, 
                     height: `${ORBIT_RADIUS * 2}px` 
@@ -54,7 +54,7 @@ const RadioScreen: React.FC = () => {
 
             {/* Center Hub: Live Feed Visual */}
             <div className="absolute z-10 flex flex-col items-center justify-center text-pip animate-pulse-fast select-none pointer-events-none">
-                <Radio size={56} strokeWidth={1.5} className="drop-shadow-[0_0_10px_rgba(16,185,129,0.8)]" />
+                <Radio size={56} strokeWidth={1.5} className="drop-shadow-[0_0_3px_rgba(65,255,0,0.7)]" />
                 <span className="mt-3 text-xs font-bold tracking-[0.3em] uppercase opacity-80 drop-shadow-md">
                     LIVE FEED
                 </span>
@@ -76,13 +76,13 @@ const RadioScreen: React.FC = () => {
                         rel="noopener noreferrer"
                         className="absolute flex flex-col items-center justify-center group text-pip outline-none hover:scale-110 transition-transform duration-200"
                         style={{
-                            // Start from center (left 50%, top 50%) then translate
+                            
                             left: '50%',
                             top: '50%',
                             transform: `translate(-50%, -50%) translate(${x}px, ${y}px)`
                         }}
                     >
-                        {/* Icon - With black bg to obscure the ring line behind it */}
+                        {}
                         <div className="bg-black p-3 rounded-full border border-transparent group-hover:border-pip/50 transition-all z-20">
                             <contact.icon size={32} strokeWidth={1.5} className="fill-black/50" />
                         </div>
