@@ -136,6 +136,21 @@ export const PROJECTS: ProjectItem[] = [
     tech: ['Java', 'Springboot', 'CSS', 'HTML'],
     description: "Projeto Login.",
     link: 'https://github.com/abevitor/ApploginGit'
+  },
+   {
+    id: 'p-crud',
+    title: 'Projeto CRUD',
+    tech: ['Java', 'Springboot', 'CSS', 'HTML'],
+    description: "Projeto Login.",
+    link: 'https://github.com/abevitor/JDBC_DIO'
+  },
+  
+  {
+    id: 'p-Docker',
+    title: 'Projeto Docker',
+    tech: ['Java', 'Docker'],
+    description: "Projeto Docker.",
+    link: 'https://github.com/abevitor/Docker_java'
   }
 ];
 
