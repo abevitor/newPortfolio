@@ -112,7 +112,7 @@ const RadioScreen: React.FC = () => {
             </div>
             <div className="flex items-center gap-2 mt-2 text-sm font-mono tracking-widest">
                 <Signal size={16} className="animate-pulse" />
-                <span>TUNING: 104.5 MHz</span>
+                <span>TUNING: 67.5 MHz</span>
             </div>
         </div>
     </div>

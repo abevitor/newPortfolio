@@ -5,8 +5,8 @@ import {
   Layout, Eye, Server, Smile, Brain, Zap, Clover, Cloud, Users, Palette, Shield,
   User, Code, Terminal, Database, Box, PenTool, Layers, Bug, Atom, Award, ExternalLink
 } from 'lucide-react';
+const PROGRAMMER_BOY_URL = "fallout_significado_vault_boy_thumbs_up__4ybskp0-removebg-preview.png";
 
-const PROGRAMMER_BOY_URL = "https://image2url.com/r2/default/images/1769410393270-040d283e-251e-48ff-8871-1a0bea0a1540.png";
 
 interface StatScreenProps {
   activeSubTab: StatSubTab;
@@ -59,7 +59,7 @@ const StatusView: React.FC = () => {
           </div>
 
           {/* Character Image Container - Responsive with max-height constraints */}
-          <div className="relative z-10 h-40 w-40 max-h-[35vh] max-w-[35vh] sm:h-96 sm:w-96 sm:max-h-[55vh] sm:max-w-[55vh] flex items-center justify-center">
+          <div className="relative z-10 h-48 w-48 max-h-[45vh] max-w-[45vh] sm:h-[32rem] sm:w-[32rem] sm:max-h-[70vh] sm:max-w-[70vh] flex items-center justify-center">
              {!imgError ? (
                <img 
                  src={PROGRAMMER_BOY_URL} 
@@ -67,7 +67,7 @@ const StatusView: React.FC = () => {
                  className="h-full w-full object-contain animate-flicker"
                  style={{
                     // Filter turns white content to Pip-Boy green (#10b981)
-                    filter: 'brightness(0) saturate(100%) invert(58%) sepia(87%) saturate(365%) hue-rotate(101deg) brightness(92%) contrast(92%) drop-shadow(0 0 5px rgba(16,185,129,0.5))',
+                    filter: 'brightness(0) saturate(100%) invert(58%) sepia(87%) saturate(365%) hue-rotate(101deg) brightness(92%) contrast(92%) drop-shadow-[0_0_2px_rgba(65,255,0,0.7)]',
                     maskImage: 'repeating-linear-gradient(black, black 2px, transparent 3px)',
                     WebkitMaskImage: 'repeating-linear-gradient(black, black 2px, transparent 3px)',
                     opacity: 0.9
@@ -88,13 +88,13 @@ const StatusView: React.FC = () => {
           {/* Description */}
           <div className="w-full max-w-2xl text-center px-4">
              <p className="text-pip text-sm sm:text-xl font-mono leading-relaxed opacity-90 drop-shadow-[0_0_2px_rgba(16,185,129,0.5)]">
-                "Specializing in building (and occasionally designing) exceptional digital experiences. Currently focused on building accessible, human-centered products."
+                "Especializado em desenvolvimento backend e na criação de soluções eficientes com Java e Spring Boot. Atualmente, estou expandindo meus conhecimentos em Inteligência Artificial e LLMs, transformando aprendizado em projetos práticos e buscando construir aplicações úteis, escaláveis e bem estruturadas."
              </p>
           </div>
 
           {/* Name Display */}
           <div className="text-xl sm:text-3xl font-bold uppercase tracking-[0.2em] text-pip drop-shadow-[0_0_8px_rgba(16,185,129,1)]">
-             ANSELL MAXIMILIAN
+               VITOR ABE PRATES
           </div>
        </div>
 
@@ -205,7 +205,7 @@ const PerksView: React.FC = () => {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 bg-pip text-black px-4 py-1 text-lg font-bold hover:bg-pip-light transition-colors uppercase"
                     >
-                       Access Certificate <ExternalLink size={16} />
+                       Acessar Certificado <ExternalLink size={16} />
                     </a>
                 )}
               </div>
