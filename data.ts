@@ -40,7 +40,7 @@ export const SKILLS: Skill[] = [
     level: 7,
     description: "Server-side runtime environment. Enables backend operations and asynchronous event handling outside the browser.",
     iconName: 'Server',
-    logoUrl: 'images\springboot-removebg-preview.png'
+    logoUrl: 'images/springson.png'
   },
   {
     id: 'html',
@@ -48,7 +48,7 @@ export const SKILLS: Skill[] = [
     level: 6,
     description: "High-level scripting language known for readability. Effective for automation scripts and data analysis quests.",
     iconName: 'Terminal',
-    logoUrl: 'images/html-removebg-preview.png'
+    logoUrl: 'images/html44.jpg'
   },
   {
     id: 'css',
