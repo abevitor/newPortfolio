@@ -16,7 +16,7 @@ export const SKILLS: Skill[] = [
     level: 8,
     description: "A reinforced alloy of JavaScript. Grants +50% Bug Resistance and enables the 'Strict Mode' perk for safer coding.",
     iconName: 'Code',
-    logoUrl: 'images/python.jpg'
+    logoUrl: 'images/python-removebg-preview.png'
   },
   {
     id: 'aws',
@@ -32,7 +32,7 @@ export const SKILLS: Skill[] = [
     level: 8,
     description: "Server-side rendering framework. significantly boosts SEO stats and reduces initial load times.",
     iconName: 'Zap',
-    logoUrl: 'images/sql.png'
+    logoUrl: 'images/sql-removebg-preview (1).png'
   },
   {
     id: 'Springboot',
@@ -40,7 +40,7 @@ export const SKILLS: Skill[] = [
     level: 7,
     description: "Server-side runtime environment. Enables backend operations and asynchronous event handling outside the browser.",
     iconName: 'Server',
-    logoUrl: 'images/springboot.png'
+    logoUrl: 'images\springboot-removebg-preview.png'
   },
   {
     id: 'html',
@@ -48,7 +48,7 @@ export const SKILLS: Skill[] = [
     level: 6,
     description: "High-level scripting language known for readability. Effective for automation scripts and data analysis quests.",
     iconName: 'Terminal',
-    logoUrl: 'images/html.png'
+    logoUrl: 'images/html-removebg-preview.png'
   },
   {
     id: 'css',
@@ -56,7 +56,7 @@ export const SKILLS: Skill[] = [
     level: 7,
     description: "Relational database management. Essential for structured data storage and complex query execution.",
     iconName: 'Database',
-    logoUrl: 'images/css.png'
+    logoUrl: 'images/css-icon-lg.png'
   }
 ];
 
