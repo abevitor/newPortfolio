@@ -113,22 +113,29 @@ export const PROJECTS: ProjectItem[] = [
     id: 'p-java',
     title: 'Exercicios Java',
     tech: ['Java'],
-    description: "A lightweight, aesthetically pleasing text editor designed for developers who value focus and minimalism.",
+    description: "Exercicios Java.",
     link: 'https://github.com/abevitor/JavaSAWS'
   },
   {
-    id: 'p-mading',
-    title: 'Mading Live',
-    tech: ['Next.js', 'Firebase', 'Tailwind'],
-    description: "A modern digital wall magazine platform for schools. Enables real-time publishing of events, articles, and achievements.",
-    link: 'https://ansellmaximilian.vercel.app/projects/mading-live'
+    id: 'p-gerenciador-de-tarefas',
+    title: 'Gerenciador de Tarefas',
+    tech: ['Java', 'Springboot', 'MySQL', 'CSS', 'HTML'],
+    description: "Gerenciador de Tarefas pessoal.",
+    link: 'https://github.com/abevitor/ToDoAPIRest'
   },
   {
-    id: 'p-rsvquick',
-    title: 'RSVQuick',
-    tech: ['React', 'Node.js', 'PostgreSQL'],
-    description: "A streamlined event management solution. Create events and manage RSVPs with ease and efficiency.",
-    link: 'https://ansellmaximilian.vercel.app/projects/rsvquick'
+    id: 'p-sudoku',
+    title: 'Sudoku music player',
+    tech: ['Java'],
+    description: "Sudoku que toca música.",
+    link: 'https://github.com/abevitor/sudoku'
+  },  
+  {
+    id: 'p-login',
+    title: 'Projeto Login',
+    tech: ['Java', 'Springboot', 'CSS', 'HTML'],
+    description: "Projeto Login.",
+    link: 'https://github.com/abevitor/ApploginGit'
   }
 ];
 
