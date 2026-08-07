@@ -8,7 +8,7 @@ export const SKILLS: Skill[] = [
     level: 9,
     description: "The universal language of the web wasteland. Proficiency allows for complex logic crafting and DOM manipulation.",
     iconName: 'Code',
-    logoUrl: 'https://cdn.simpleicons.org/javascript'
+    logoUrl: 'images/226777.png'
   },
   {
     id: 'python',
@@ -16,7 +16,7 @@ export const SKILLS: Skill[] = [
     level: 8,
     description: "A reinforced alloy of JavaScript. Grants +50% Bug Resistance and enables the 'Strict Mode' perk for safer coding.",
     iconName: 'Code',
-    logoUrl: 'https://cdn.simpleicons.org/typescript'
+    logoUrl: 'images/python.jpg'
   },
   {
     id: 'aws',
@@ -24,55 +24,39 @@ export const SKILLS: Skill[] = [
     level: 9,
     description: "Advanced component fabrication technology. Allows rapid construction of interactive UI interfaces with high durability.",
     iconName: 'Atom',
-    logoUrl: 'https://cdn.simpleicons.org/react'
+    logoUrl: 'images/aws.png'
   },
   {
-    id: 's-next',
-    name: 'Next.js',
+    id: 'mySQL',
+    name: 'mySQL',
     level: 8,
     description: "Server-side rendering framework. significantly boosts SEO stats and reduces initial load times.",
     iconName: 'Zap',
-    logoUrl: 'https://cdn.simpleicons.org/nextdotjs'
+    logoUrl: 'images/sql.png'
   },
   {
-    id: 's-node',
-    name: 'Node.js',
+    id: 'Springboot',
+    name: 'Springboot',
     level: 7,
     description: "Server-side runtime environment. Enables backend operations and asynchronous event handling outside the browser.",
     iconName: 'Server',
-    logoUrl: 'https://cdn.simpleicons.org/nodedotjs'
+    logoUrl: 'images/springboot.png'
   },
   {
-    id: 's-python',
-    name: 'Python',
+    id: 'html',
+    name: 'html',
     level: 6,
     description: "High-level scripting language known for readability. Effective for automation scripts and data analysis quests.",
     iconName: 'Terminal',
-    logoUrl: 'https://cdn.simpleicons.org/python'
+    logoUrl: 'images/html.png'
   },
   {
-    id: 's-sql',
-    name: 'PostgreSQL',
+    id: 'css',
+    name: 'css',
     level: 7,
     description: "Relational database management. Essential for structured data storage and complex query execution.",
     iconName: 'Database',
-    logoUrl: 'https://cdn.simpleicons.org/postgresql'
-  },
-  {
-    id: 's-docker',
-    name: 'Docker',
-    level: 5,
-    description: "Containerization platform. Allows for consistent deployment environments across different servers.",
-    iconName: 'Box',
-    logoUrl: 'https://cdn.simpleicons.org/docker'
-  },
-  {
-    id: 's-figma',
-    name: 'Figma',
-    level: 6,
-    description: "Interface design tool. Used for blueprinting applications before construction begins.",
-    iconName: 'PenTool',
-    logoUrl: 'https://cdn.simpleicons.org/figma'
+    logoUrl: 'images/css.png'
   }
 ];
 
@@ -119,18 +103,18 @@ export const PERKS: Perk[] = [
 
 export const PROJECTS: ProjectItem[] = [
   {
-    id: 'p-hashnomon',
-    title: 'Hashnomon',
-    tech: ['React', 'TypeScript', 'Web3'], 
-    description: "A gamified platform inspired by classic creature collection games. Features unique mechanics for exploring the digital wilderness.",
-    link: 'https://ansellmaximilian.vercel.app/projects/hashnomon'
+    id: 'p-financeiro',
+    title: 'Sistema financeiro',
+    tech: ['Java', 'Springboot', 'MySQL', 'HTML', 'CSS'], 
+    description: "Sistema full stack de controle financeiro pessoal.",
+    link: 'https://github.com/abevitor/financeiro'
   },
   {
-    id: 'p-lunar',
-    title: 'Lunar Editor',
-    tech: ['TypeScript', 'Electron', 'React'],
+    id: 'p-java',
+    title: 'Exercicios Java',
+    tech: ['Java'],
     description: "A lightweight, aesthetically pleasing text editor designed for developers who value focus and minimalism.",
-    link: 'https://ansellmaximilian.vercel.app/projects/lunar-editor'
+    link: 'https://github.com/abevitor/JavaSAWS'
   },
   {
     id: 'p-mading',

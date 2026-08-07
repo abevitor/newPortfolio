@@ -5,7 +5,7 @@ import {
   Layout, Eye, Server, Smile, Brain, Zap, Clover, Cloud, Users, Palette, Shield,
   User, Code, Terminal, Database, Box, PenTool, Layers, Bug, Atom, Award, ExternalLink
 } from 'lucide-react';
-const PROGRAMMER_BOY_URL = "fallout_significado_vault_boy_thumbs_up__4ybskp0-removebg-preview.png";
+const PROGRAMMER_BOY_URL = "/images/fallout_significado_vault_boy_thumbs_up__4ybskp0-removebg-preview.png";
 
 
 interface StatScreenProps {
