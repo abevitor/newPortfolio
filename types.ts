@@ -47,7 +47,6 @@ export interface Achievement {
   id: string;
   title: string;
   event: string;
-  rank: string;
   date: string;
   description: string;
 }

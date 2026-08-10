@@ -56,7 +56,7 @@ export const SKILLS: Skill[] = [
     level: 7,
     description: "Framework CSS baseado em classes utilitárias para criação de interfaces modernas e responsivas. Facilita a estilização e permite desenvolver layouts de forma rápida e consistente.",
     iconName: 'code',
-    logoUrl: 'images/css-icon-lg.png'
+    logoUrl: 'images/icons8-tailwind-css-96.png'
   }
 ];
 
@@ -156,28 +156,39 @@ export const PROJECTS: ProjectItem[] = [
 
 export const ACHIEVEMENTS: Achievement[] = [
   {
-    id: 'a-hackcal',
-    title: 'Grand Prize Winner',
-    event: 'HackCal 2024',
-    rank: '1st Place',
-    date: '2024.02.15',
-    description: "Awarded top honors for 'NeuroLink', a brain-computer interface simulator. Competed against 50+ teams."
+    id: 'Bootcamp-DIO',
+    title: 'Conclusão BootCamp DIO JAVA',
+    event: 'BootCamp DIO',
+    date: '13.08.2025',
+    description: "Finalização do BootCamp com carga horária de 71 horas."
   },
   {
-    id: 'a-bearhack',
-    title: 'Best UI/UX Design',
-    event: 'BearHack 2023',
-    rank: 'Special Category',
-    date: '2023.11.10',
-    description: "Recognized for exceptional interface design and user experience flow on 'Wasteland Map', a resource tracking app."
+    id: 'certificado-fiap',
+    title: 'Certificado FIAP JAVA',
+    event: 'Cursos FIAP',
+    date: '19.05.2025',
+    description: "Finalização do curso de Java da FIAP com carga horária de 60 horas."
   },
   {
-    id: 'a-calhacks',
-    title: 'Competition Finalist',
-    event: 'CalHacks 10.0',
-    rank: 'Top 10',
-    date: '2023.10.28',
-    description: "Reached the finals with 'Pip-Boy-Web', an early prototype of this portfolio system."
+    id: 'Cyberseguranca-CISCO',
+    title: 'Certificado CyberSegurança básica pela CISCO',
+    event: 'Cisco Academy',
+    date: '2025',
+    description: "Finalização do curso de Introdução a CyberSegurança pela CISCO."
+  },
+  {
+    id: 'AWS-DIO',
+    title: 'Fundamentos de Cloud com AWS',
+    event:'Cursos DIO',
+    date:'24.07.2026',
+    description:'Finalização do curso de fundamentos de Cloud com AWS pela DIO com carga horária de 48 horas.'
+  },
+  {
+    id: 'Artigo de inteli',
+    title: 'Fundamentos de Cloud com AWS',
+    event:'Cursos DIO',
+    date:'24.07.2026',
+    description:'Finalização do curso de fundamentos de Cloud com AWS pela DIO com carga horária de 48 horas.'
   }
 ];
 
