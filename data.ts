@@ -6,7 +6,7 @@ export const SKILLS: Skill[] = [
     id: 'java',
     name: 'Java',
     level: 9,
-    description: "The universal language of the web wasteland. Proficiency allows for complex logic crafting and DOM manipulation.",
+    description: "Linguagem orientada a objetos conhecida por sua robustez e portabilidade. Amplamente utilizada no desenvolvimento de aplicações e sistemas backend.",
     iconName: 'Code',
     logoUrl: 'images/226777.png'
   },
@@ -14,7 +14,7 @@ export const SKILLS: Skill[] = [
     id: 'python',
     name: 'Python',
     level: 8,
-    description: "A reinforced alloy of JavaScript. Grants +50% Bug Resistance and enables the 'Strict Mode' perk for safer coding.",
+    description: "Linguagem versátil e conhecida pela simplicidade e legibilidade. Muito utilizada em automação, análise de dados e desenvolvimento de aplicações.",
     iconName: 'Code',
     logoUrl: 'images/python-removebg-preview.png'
   },
@@ -22,40 +22,40 @@ export const SKILLS: Skill[] = [
     id: 'aws',
     name: 'AWS',
     level: 9,
-    description: "Advanced component fabrication technology. Allows rapid construction of interactive UI interfaces with high durability.",
-    iconName: 'Atom',
+    description: "Plataforma de computação em nuvem com diversos serviços para infraestrutura e aplicações. Permite criar soluções escaláveis, seguras e flexíveis.",
+    iconName: 'Plataform',
     logoUrl: 'images/aws.png'
   },
   {
     id: 'mySQL',
     name: 'mySQL',
     level: 8,
-    description: "Server-side rendering framework. significantly boosts SEO stats and reduces initial load times.",
-    iconName: 'Zap',
+    description: "Sistema de gerenciamento de banco de dados relacional conhecido por desempenho e confiabilidade. Utilizado para armazenar e organizar dados de aplicações.",
+    iconName: 'database',
     logoUrl: 'images/sql-removebg-preview (1).png'
   },
   {
     id: 'Springboot',
     name: 'Springboot',
     level: 7,
-    description: "Server-side runtime environment. Enables backend operations and asynchronous event handling outside the browser.",
-    iconName: 'Server',
-    logoUrl: 'images/springson.png'
+    description: "Framework Java para desenvolvimento de aplicações robustas e escaláveis. Facilita a criação de APIs REST e sistemas backend.",
+    iconName: 'code',
+    logoUrl: 'images/icons8-spring-boot-80.png'
   },
   {
     id: 'html',
     name: 'html',
     level: 6,
-    description: "High-level scripting language known for readability. Effective for automation scripts and data analysis quests.",
-    iconName: 'Terminal',
-    logoUrl: 'images/html44.jpg'
+    description: "Linguagem de marcação essencial para estruturar páginas web. Define a organização e o conteúdo das interfaces digitais.",
+    iconName: 'code',
+    logoUrl: 'images/icons8-html-100.png'
   },
   {
-    id: 'css',
-    name: 'css',
+    id: 'TailWind',
+    name: 'TailWind',
     level: 7,
-    description: "Relational database management. Essential for structured data storage and complex query execution.",
-    iconName: 'Database',
+    description: "Framework CSS baseado em classes utilitárias para criação de interfaces modernas e responsivas. Facilita a estilização e permite desenvolver layouts de forma rápida e consistente.",
+    iconName: 'code',
     logoUrl: 'images/css-icon-lg.png'
   }
 ];
@@ -141,7 +141,7 @@ export const PROJECTS: ProjectItem[] = [
     id: 'p-crud',
     title: 'Projeto CRUD',
     tech: ['Java', 'Springboot', 'CSS', 'HTML'],
-    description: "Projeto Login.",
+    description: "Projeto CRUD.",
     link: 'https://github.com/abevitor/JDBC_DIO'
   },
   
