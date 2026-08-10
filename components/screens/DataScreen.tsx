@@ -184,6 +184,29 @@ const AchievementsView: React.FC = () => {
                                 <span>{ach.date}</span>
                             </div>
                             <p className="text-lg opacity-90">{ach.description}</p>
+                            <div className='flex gap-2 mt-4'>
+                              {}
+                            {ach.pdfurl && (
+                              <div className="flex gap-2 mt-4">
+                                <a 
+                                  href={ach.pdfurl}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex items-center gap-2 bg-pip text-black px-4 py-1 text-sm font-bold hover:bg-pip-light transition-colors uppercase"
+                                >
+                                  Visualizar PDF
+                                </a>
+
+                                <a 
+                                  href={ach.pdfurl}
+                                  download
+                                  className="inline-flex items-center gap-2 border-2 border-pip text-pip px-4 py-1 text-sm font-bold hover:bg-pip/10 transition-colors uppercase"
+                                >
+                                  Baixar PDF
+                                </a>
+                              </div>
+                            )}
+                            </div>
                         </div>
                     </div>
                 ))}
