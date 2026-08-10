@@ -160,35 +160,39 @@ export const ACHIEVEMENTS: Achievement[] = [
     title: 'Conclusão BootCamp DIO JAVA',
     event: 'BootCamp DIO',
     date: '13.08.2025',
-    description: "Finalização do BootCamp com carga horária de 71 horas."
+    description: "Finalização do BootCamp com carga horária de 71 horas.",
+    pdfurl: 'components/certificados/Bootcamp completo.pdf'
   },
   {
     id: 'certificado-fiap',
     title: 'Certificado FIAP JAVA',
     event: 'Cursos FIAP',
     date: '19.05.2025',
-    description: "Finalização do curso de Java da FIAP com carga horária de 60 horas."
+    description: "Finalização do curso de Java da FIAP com carga horária de 60 horas.",
+    pdfurl:'components/certificados/fiap.pdf'
   },
   {
     id: 'Cyberseguranca-CISCO',
     title: 'Certificado CyberSegurança básica pela CISCO',
     event: 'Cisco Academy',
     date: '2025',
-    description: "Finalização do curso de Introdução a CyberSegurança pela CISCO."
+    description: "Finalização do curso de Introdução a CyberSegurança pela CISCO.",
+    pdfurl:'components/certificados/I2CSUpdate20250220-28-paz4p2.pdf'
   },
   {
     id: 'AWS-DIO',
     title: 'Fundamentos de Cloud com AWS',
     event:'Cursos DIO',
     date:'24.07.2026',
-    description:'Finalização do curso de fundamentos de Cloud com AWS pela DIO com carga horária de 48 horas.'
+    description:'Finalização do curso de fundamentos de Cloud com AWS pela DIO com carga horária de 48 horas.',
+    pdfurl: 'components/certificados/AWS_FINAL.pdf'
   },
   {
-    id: 'Artigo de inteli',
-    title: 'Fundamentos de Cloud com AWS',
-    event:'Cursos DIO',
-    date:'24.07.2026',
-    description:'Finalização do curso de fundamentos de Cloud com AWS pela DIO com carga horária de 48 horas.'
+    id: 'artigo-IA',
+    title: 'IA como ferramenta de insegurança',
+    event:'FATECLOG',
+    date:'2026',
+    description:'Investiga como a Inteligência Artificial transforma a segurança privada via PLN: benefícios como automação, agilidade na análise de dados e apoio à decisão, e limites como ironia, contexto cultural, vieses e impacto no mercado de trabalho — com foco no uso ético de PLNs e IAs.'
   }
 ];
 

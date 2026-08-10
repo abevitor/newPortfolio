@@ -49,6 +49,7 @@ export interface Achievement {
   event: string;
   date: string;
   description: string;
+  pdfurl?: string;
 }
 
 export interface InventoryItem {

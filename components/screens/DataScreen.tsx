@@ -175,7 +175,7 @@ const AchievementsView: React.FC = () => {
                         <div className="flex-grow">
                             <div className="flex justify-between items-start mb-1">
                                 <h3 className="text-xl font-bold uppercase text-pip">{ach.title}</h3>
-                                <span className="text-sm border border-pip px-1">{ach.rank}</span>
+                                <span className="text-sm border border-pip px-1">{}</span>
                             </div>
                             <div className="flex items-center gap-2 text-sm opacity-70 mb-2">
                                 <Calendar size={14} />
