@@ -26,6 +26,9 @@
             animation: {
               'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
               'flicker': 'flicker 0.15s infinite',
+              'modal-in': 'moda-in 0.2s ease-out forwards',
+              'modal-out': 'modal-out 0.25s ease-in fowards',
+              'backdrop-out': 'backdrop-out 0.25 ease-in fowards',
             },
             keyframes: {
               flicker: {
@@ -33,8 +36,24 @@
                 '50%': { opacity: '1.0' },
                 '100%': { opacity: '0.9' },
               }
-            }
-          }
+            },
+            'modal-in': {
+              '0%': { opacity: '0', transform: 'scale(0.9)'},
+              '100%': { opacity: '1', transform: 'scale(1)'},
+            },
+            'modal-out': {
+              '0%': { opacity: '1', transform: 'scale(1)'},
+              '100%': { opacity: '1', transform: 'scale(1)'},
+            },
+            'backdrop-in': {
+              '0%': { opacity: '0', transform: 'scale(0.9)'},
+              '100%': {opacity: '1', transform: 'scale(1)'},
+            },
+            'backdrop-out': {
+              '0%': { opacity: '1', transform: 'scale(1)'},
+              '100%': {opacity: '0', transform: 'scale(0.85)'},
+            },
+          },
         }
       }
     </script>
