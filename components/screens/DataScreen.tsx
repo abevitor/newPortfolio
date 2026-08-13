@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { DataSubTab, Quest, ProjectItem, Achievement } from '../../types';
 import { QUESTS, PROJECTS, ACHIEVEMENTS } from '../../data';
-import { CheckSquare, Square, Wrench, Trophy, Calendar, ExternalLink } from 'lucide-react';
+import { CheckSquare, Square, Wrench, Trophy, Calendar, ExternalLink, X, FileText, Download } from 'lucide-react';
 
 interface DataScreenProps {
   activeSubTab: DataSubTab;
@@ -162,6 +162,82 @@ const ProjectsView: React.FC = () => {
       </div>
     );
 };
+
+interface PdfModalProps{
+  url: string;
+  title: string;
+  onClose: () => void;
+}
+
+const PdfModal: React.FC<PdfModalProps> = ({url, title, onClose}) => {
+  const [isClosing, setIsClosing] = useState(false);
+
+  useEffect(() => {
+    const handleKey = (e: KeyboardEvent) => {
+      if(e.key === 'Escape') handleClose();
+    };
+    window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, []);
+  
+  const handleClose = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      onClose();
+    }, 250);
+  };
+
+  return (
+    <div 
+      className={`fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm ${
+        isClosing ? 'animate-backdrop-out' : 'animate-backdrop-in'
+      }`}
+      onClick={handleClose}
+    >
+      <div 
+        className={`relative w-full max-w-4xl h-[85vh] bg-pip-bg border-2 border-pip shadow-[0_0_30px_rgba(65,255,0,0.3)] flex flex-col ${
+          isClosing ? 'animate-modal-out' : 'animate-modal-in'
+        }`}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="flex items-center justify-between border-b-2 border-pip px-4 py-2 shrink-0">
+          <div className="flex items-center gap-2 text-pip font-mono uppercase tracking-widest">
+            <FileText size={18} />
+            <span className="text-sm sm:text-base truncate">{title}</span>
+          </div>
+          <button 
+            onClick={handleClose}
+            className="text-pip hover:bg-pip hover:text-black p-1 transition-colors"
+            aria-label="Fechar"
+          >
+            <X size={20} />
+          </button>
+        </div>
+
+        <div className="flex-1 bg-black/40 overflow-hidden">
+          <iframe 
+            src={url} 
+            title={title}
+            className="w-full h-full"
+          />
+        </div>
+
+        <div className="flex justify-end border-t-2 border-pip px-4 py-2 shrink-0">
+          <a 
+            href={url}
+            download
+            className="inline-flex items-center gap-2 bg-pip text-black px-4 py-1 text-sm font-bold hover:bg-pip-light transition-colors uppercase"
+          >
+            <Download size={16} />
+            Baixar PDF
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
 
 const AchievementsView: React.FC = () => {
     return (
