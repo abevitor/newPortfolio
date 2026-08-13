@@ -240,6 +240,8 @@ const PdfModal: React.FC<PdfModalProps> = ({url, title, onClose}) => {
 
 
 const AchievementsView: React.FC = () => {
+    const [viewingPdf, setViewingPdf] = useState<{ url: string; title: string } | null>(null);
+
     return (
         <div className="h-full overflow-y-auto pr-2 text-pip">
             <div className="grid grid-cols-1 gap-4 pb-4">
@@ -260,21 +262,18 @@ const AchievementsView: React.FC = () => {
                                 <span>{ach.date}</span>
                             </div>
                             <p className="text-lg opacity-90">{ach.description}</p>
-                            <div className='flex gap-2 mt-4'>
-                              {}
-                            {ach.pdfurl && (
+
+                            {ach.pdfUrl && (
                               <div className="flex gap-2 mt-4">
-                                <a 
-                                  href={ach.pdfurl}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
+                                <button 
+                                  onClick={() => setViewingPdf({ url: ach.pdfUrl!, title: ach.title })}
                                   className="inline-flex items-center gap-2 bg-pip text-black px-4 py-1 text-sm font-bold hover:bg-pip-light transition-colors uppercase"
                                 >
                                   Visualizar PDF
-                                </a>
+                                </button>
 
                                 <a 
-                                  href={ach.pdfurl}
+                                  href={ach.pdfUrl}
                                   download
                                   className="inline-flex items-center gap-2 border-2 border-pip text-pip px-4 py-1 text-sm font-bold hover:bg-pip/10 transition-colors uppercase"
                                 >
@@ -282,11 +281,18 @@ const AchievementsView: React.FC = () => {
                                 </a>
                               </div>
                             )}
-                            </div>
                         </div>
                     </div>
                 ))}
             </div>
+
+            {viewingPdf && (
+              <PdfModal 
+                url={viewingPdf.url} 
+                title={viewingPdf.title} 
+                onClose={() => setViewingPdf(null)} 
+              />
+            )}
         </div>
     );
 }

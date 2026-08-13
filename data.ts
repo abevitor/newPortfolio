@@ -161,7 +161,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     event: 'BootCamp DIO',
     date: '13.08.2025',
     description: "Finalização do BootCamp com carga horária de 71 horas.",
-    pdfurl: 'components/certificados/Bootcamp completo.pdf'
+    pdfUrl: 'components/certificados/Bootcamp completo.pdf'
   },
   {
     id: 'certificado-fiap',
@@ -169,7 +169,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     event: 'Cursos FIAP',
     date: '19.05.2025',
     description: "Finalização do curso de Java da FIAP com carga horária de 60 horas.",
-    pdfurl:'components/certificados/fiap.pdf'
+    pdfUrl:'components/certificados/fiap.pdf'
   },
   {
     id: 'Cyberseguranca-CISCO',
@@ -177,7 +177,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     event: 'Cisco Academy',
     date: '2025',
     description: "Finalização do curso de Introdução a CyberSegurança pela CISCO.",
-    pdfurl:'components/certificados/I2CSUpdate20250220-28-paz4p2.pdf'
+    pdfUrl:'components/certificados/I2CSUpdate20250220-28-paz4p2.pdf'
   },
   {
     id: 'AWS-DIO',
@@ -185,7 +185,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     event:'Cursos DIO',
     date:'24.07.2026',
     description:'Finalização do curso de fundamentos de Cloud com AWS pela DIO com carga horária de 48 horas.',
-    pdfurl: 'components/certificados/AWS_FINAL.pdf'
+    pdfUrl: 'components/certificados/AWS_FINAL.pdf'
   },
   {
     id: 'artigo-IA',
