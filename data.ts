@@ -62,14 +62,12 @@ export const SKILLS: Skill[] = [
 
 export const PERKS: Perk[] = [
   {
-    id: 'c-equitable',
-    name: 'Equitable Elevation III',
-    rank: 1,
-    maxRank: 1,
-    description: "Honorable Achievement Certificate recognizing dedication to equitable growth and elevation.",
+    id: 'English',
+    name: 'Proficiência na lingua inglesa',
+    rank: 3,
+    maxRank: 3,
+    description: "Leitura técnica e comunicação em nível avançado, com fluência em desenvolvimento.",
     iconName: 'Award',
-    issuer: 'Certopus',
-    link: 'https://certopus.com/c/e32b60aec59244308869ed954e16d267'
   },
   {
     id: 'c-javascript',
