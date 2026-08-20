@@ -1,7 +1,14 @@
+import { Document, Page } from 'react-pdf';
+import { pdfjs } from 'react-pdf';
 import React, { useState, useEffect } from 'react';
 import { DataSubTab, Quest, ProjectItem, Achievement } from '../../types';
 import { QUESTS, PROJECTS, ACHIEVEMENTS } from '../../data';
 import { CheckSquare, Square, Wrench, Trophy, Calendar, ExternalLink, X, FileText, Download } from 'lucide-react';
+
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+  'pdfjs-dist/build/pdf.worker.min.mjs',
+  import.meta.url
+).toString();
 
 interface DataScreenProps {
   activeSubTab: DataSubTab;
@@ -171,6 +178,8 @@ interface PdfModalProps{
 
 const PdfModal: React.FC<PdfModalProps> = ({url, title, onClose}) => {
   const [isClosing, setIsClosing] = useState(false);
+  const [numPages, SetNumPages] = useState(0);
+  const [pageNumber, setPageNumber] = useState(1);
 
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
@@ -214,13 +223,37 @@ const PdfModal: React.FC<PdfModalProps> = ({url, title, onClose}) => {
           </button>
         </div>
 
-        <div className="flex-1 bg-black/40 overflow-hidden">
-          <iframe 
-            src={url} 
-            title={title}
-            className="w-full h-full"
-          />
-        </div>
+        <div className="flex-1 bg-black/40 overflow-auto flex justify-center items-start p-4">
+        <Document
+        file={url}
+        onLoadSuccess={({numPages}) => SetNumPages(numPages)}
+        loading={<span className="text-pip font-mono anime-pulse">Carregando PDF...</span>}
+        error={<span className="text-pip font-mono">Erro ao carregar o PDF</span>}
+        >
+          <Page pageNumber={pageNumber} />
+          </Document>
+          </div>
+
+          {/* NOVO: navegação de páginas, só aparece se tiver mais de 1 página */}
+        {numPages > 1 && (
+          <div className="flex justify-center items-center gap-4 text-pip font-mono py-2 border-t border-pip/30 shrink-0">
+            <button 
+              onClick={() => setPageNumber(p => Math.max(1, p - 1))}
+              disabled={pageNumber <= 1}
+              className="px-3 py-1 border border-pip hover:bg-pip hover:text-black transition-colors disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-pip"
+            >
+              Anterior
+            </button>
+            <span>{pageNumber} / {numPages}</span>
+            <button 
+              onClick={() => setPageNumber(p => Math.min(numPages, p + 1))}
+              disabled={pageNumber >= numPages}
+              className="px-3 py-1 border border-pip hover:bg-pip hover:text-black transition-colors disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-pip"
+            >
+              Próxima
+            </button>
+          </div>
+        )}
 
         <div className="flex justify-end border-t-2 border-pip px-4 py-2 shrink-0">
           <a 
@@ -236,7 +269,6 @@ const PdfModal: React.FC<PdfModalProps> = ({url, title, onClose}) => {
     </div>
   );
 };
-
 
 
 const AchievementsView: React.FC = () => {
