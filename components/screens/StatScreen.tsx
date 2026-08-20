@@ -127,19 +127,19 @@ const SpecialView: React.FC = () => {
 
       {/* Detail Column */}
       <div className="w-full md:w-1/2 flex flex-col items-center justify-start p-4 text-pip">
-        <div className="relative w-48 h-48 sm:w-64 sm:h-64 mb-6 flex items-center justify-center border-4 border-pip rounded-full p-8 shadow-[0_0_20px_rgba(16,185,129,0.3)]">
+        <div className="relative w-48 h-48 sm:w-64 sm:h-64 mb-6 flex items-center justify-center border-4 border-pip rounded-full p-8 shadow-[0_0_20px_rgba(65,255,0,0.3)]">
            {selectedSkill.logoUrl ? (
              <img 
                 src={selectedSkill.logoUrl} 
                 alt={selectedSkill.name}
-                className="w-32 h-32 sm:w-40 sm:h-40 object-contain animate-pulse-fast drop-shadow-[0_0_8px_rgba(16,185,129,0.8)]"
+                className="w-32 h-32 sm:w-40 sm:h-40 object-contain animate-pulse-fast drop-shadow-[0_0_8px_rgba(65,255,0,0.8)]"
                 style={{
-                  // The magic green filter
-                  filter: 'brightness(0) saturate(100%) invert(58%) sepia(87%) saturate(365%) hue-rotate(101deg) brightness(92%) contrast(92%) drop-shadow(0 0 5px rgba(16,185,129,0.8))'
+                 
+                  filter: 'brightness(0) saturate(100%) invert(64%) sepia(97%) saturate(1980%) hue-rotate(70deg) brightness(103%) contrast(103%) drop-shadow(0 0 5px rgba(65,255,0,0.8))'
                 }}
              />
            ) : (
-             <CurrentIcon size={120} strokeWidth={1.5} className="animate-pulse-fast drop-shadow-[0_0_8px_rgba(16,185,129,0.8)]" />
+             <CurrentIcon size={120} strokeWidth={1.5} className="animate-pulse-fast drop-shadow-[0_0_8px_rgba(65,255,0,0.8)]" />
            )}
         </div>
         
