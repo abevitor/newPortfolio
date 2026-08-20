@@ -205,7 +205,7 @@ const PerksView: React.FC = () => {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 bg-pip text-black px-4 py-1 text-lg font-bold hover:bg-pip-light transition-colors uppercase"
                     >
-                       Acessar Certificado <ExternalLink size={16} />
+                       <ExternalLink size={16} />
                     </a>
                 )}
               </div>
