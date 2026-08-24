@@ -65,38 +65,29 @@ export const PERKS: Perk[] = [
     id: 'English',
     name: 'Proficiência na lingua inglesa',
     rank: 3,
-    maxRank: 3,
+    maxRank: 5,
     description: "Leitura técnica e comunicação em nível avançado, com fluência em desenvolvimento.",
-    iconName: 'Award',
+    iconName: 'MessageCircleMore',
   },
-  {
-    id: 'c-javascript',
-    name: 'JavaScript (Basic)',
-    rank: 1,
-    maxRank: 1,
-    description: "Certified competency in JavaScript language fundamentals, including functions, events, and error handling.",
-    iconName: 'Code',
-    issuer: 'HackerRank',
-    link: 'https://www.hackerrank.com/certificates/559db4261ad4'
+   {
+    id: 'self-learning',
+    name: 'Aprendizado Contínuo',
+    rank: 4,
+    maxRank: 5,
+    description: "Facilidade em absorver novas tecnologias e frameworks de forma autodidata.",
+    iconName: 'Glasses',
   },
-  {
-    id: 'c-react',
-    name: 'React (Basic)',
-    rank: 1,
-    maxRank: 1,
-    description: "Certified competency in React framework fundamentals, covering components, props, state, and lifecycle.",
-    iconName: 'Atom',
-    issuer: 'HackerRank',
-    link: 'https://www.hackerrank.com/certificates/847db34c7fbe'
-  },
-  {
-    id: 'p-fullstack',
-    name: 'Full Stack Savant',
+   {
+    id: 'teamwork',
+    name: 'Trabalho em equipe',
     rank: 3,
-    maxRank: 3,
-    description: "You are as comfortable in the DB as you are in CSS. +25% efficiency when working solo on projects.",
-    iconName: 'Layers'
-  }
+    maxRank: 5,
+    description: "Experiência colaborando em projetos de grupo.",
+    iconName: 'Handshake',
+  },
+
+  
+
 ];
 
 export const PROJECTS: ProjectItem[] = [

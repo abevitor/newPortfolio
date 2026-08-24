@@ -3,7 +3,7 @@ import { StatSubTab, Skill, Perk } from '../../types';
 import { SKILLS, PERKS } from '../../data';
 import { 
   Layout, Eye, Server, Smile, Brain, Zap, Clover, Cloud, Users, Palette, Shield,
-  User, Code, Terminal, Database, Box, PenTool, Layers, Bug, Atom, Award, ExternalLink
+  User, Code, Terminal, Database, Box, PenTool, Layers, Bug, Atom, Award, ExternalLink, MessageCircleMore, Glasses, Handshake
 } from 'lucide-react';
 const PROGRAMMER_BOY_URL = "/images/fallout_significado_vault_boy_thumbs_up__4ybskp0-removebg-preview.png";
 
@@ -28,7 +28,7 @@ const StatScreen: React.FC<StatScreenProps> = ({ activeSubTab }) => {
 // Icon mapper
 const IconMap: Record<string, React.ElementType> = {
   Layout, Eye, Server, Smile, Brain, Zap, Clover, Cloud, Users, Palette, Shield,
-  Code, Terminal, Database, Box, PenTool, Layers, Bug, Atom, Award
+  Code, Terminal, Database, Box, PenTool, Layers, Bug, Atom, Award, MessageCircleMore, Glasses, Handshake
 };
 
 const StatusView: React.FC = () => {
