@@ -187,44 +187,49 @@ export const ACHIEVEMENTS: Achievement[] = [
 
 export const QUESTS: Quest[] = [
   {
-    id: 'q-nexsoft',
-    title: 'Android Developer',
-    summary: 'PT Paramadaksa Teknologi Nusantara',
-    description: "Contract role at nexSOFT. Responsible for analyzing FSDs and implementing Android solutions using Java. Coordinate with QC/QA for seamless testing and release preparation.",
-    date: 'Jan 2024 - Present',
+    id: 'q-fatec-monitor',
+    title: 'Monitor Sala ADA',
+    summary: 'FATEC - Carapicuíba',
+    description: "Suporte técnico e infraestrutura de TI, atendendo usuários e mantendo os equipamentos do laboratório em funcionamento.",
+    date: 'Ago 2025 - Dez 2025',
+    status: 'completed',
+    steps: [
+      { text: 'Suporte técnico a usuários e manutenção de equipamentos', completed: true },
+      { text: 'Diagnóstico de falhas e substituição de componentes', completed: true },
+      { text: 'Formatação, instalação e configuração de SO e softwares', completed: true },
+      { text: 'Montagem e manutenção de redes (crimpagem RJ45, keystones)', completed: true },
+      { text: 'Criação de mídias bootáveis com Ventoy', completed: true }
+    ]
+  },
+    {
+    id: 'q-fateclog',
+    title: 'Artigo Acadêmico - FATECLOG',
+    summary: 'XVI FATECLOG 2025',
+    description: "Investiga como a Inteligência Artificial transforma a segurança privada via PLN: benefícios como automação e agilidade na análise de dados, e limites como vieses e impacto no mercado de trabalho, com foco no uso ético de IAs.",
+    date: '2025',
+    status: 'completed',
+    steps: [
+      { text: 'Pesquisa e revisão bibliográfica sobre IA e PLN', completed: true },
+      { text: 'Redação do artigo científico', completed: true },
+      { text: 'Apresentação no XVI FATECLOG', completed: true },
+      { text: 'Nota máxima na avaliação', completed: true }
+    ]
+  },
+   {
+    id: 'q-fatec-ads',
+    title: 'Análise e Desenvolvimento de Sistemas',
+    summary: 'FATEC - Carapicuíba',
+    description: "Formação superior em ADS, com foco em desenvolvimento back-end em Java, programação orientada a objetos e boas práticas de engenharia de software.",
+    date: '2023 - 2027',
     status: 'active',
     steps: [
-      { text: 'Analyze FSDs & Tech Solutions', completed: true },
-      { text: 'Implement Change Requests (Java)', completed: true },
-      { text: 'Coordinate w/ QA Teams', completed: true },
-      { text: 'Release Prep & Regression Testing', completed: true }
-    ]
-  },
-  {
-    id: 'q-rumahsehat',
-    title: 'Business System Dev',
-    summary: 'Rumah Sehat',
-    description: "Full-stack development for internal business systems. Managed requirements, design, and coding for sales, purchasing, and inventory modules.",
-    date: 'Jul 2020 - Jan 2024',
-    status: 'completed',
-    steps: [
-      { text: 'System Design (React, Node, Postgres)', completed: true },
-      { text: 'Requirement Gathering & Analysis', completed: true },
-      { text: 'Stock Reconciliation', completed: true },
-      { text: 'Automate Weekly Invoicing (50+)', completed: true }
-    ]
-  },
-  {
-    id: 'q-matana',
-    title: 'Information Systems',
-    summary: 'Matana University',
-    description: "Bachelor's degree in Management Information Systems. Graduated with a 3.85 GPA.",
-    date: '2018 - 2022',
-    status: 'completed',
-    steps: [
-      { text: 'Enterprise Resource Planning (ERP)', completed: true },
-      { text: 'Relational Databases', completed: true },
-      { text: 'Final Grade: 3.85', completed: true }
+      { text: 'Programação Orientada a Objetos', completed: true },
+      { text: 'APIs REST e Spring Boot', completed: true },
+      { text: 'Sistemas Operacionais', completed: true },
+      { text: 'Engenharia de Software', completed: true },
+      { text: 'Lógica de Programação', completed: true },
+      { text: 'Banco de Dados (MySQL)', completed: true },
+      { text: 'Conclusão prevista para 2027', completed: false }
     ]
   }
 ];
