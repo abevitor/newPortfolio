@@ -1,5 +1,6 @@
 import React from 'react';
 import { Github, Linkedin, Radio, Signal } from 'lucide-react';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 const ORBIT_RADIUS = 130; // Radius in pixels
 
@@ -22,6 +23,7 @@ const ORBITAL_CONTACTS = [
 ];
 
 const RadioScreen: React.FC = () => {
+    const { t } = useLanguage();
   return (
     <div className="h-full w-full flex flex-col items-center justify-center relative overflow-hidden">
         
@@ -36,7 +38,7 @@ const RadioScreen: React.FC = () => {
                 <h2 className="text-xl sm:text-2xl font-bold tracking-[0.3em] uppercase text-pip drop-shadow-[0_0_2px_rgba(65,255,0,0.7)]">
                     Pip-Boy Radio
                 </h2>
-                <div className="text-xs tracking-widest text-pip opacity-70">SIGNAL FOUND</div>
+                <div className="text-xs tracking-widest text-pip opacity-70">{t.radioScreen.signalFound}</div>
              </div>
         </div>
 
@@ -56,7 +58,7 @@ const RadioScreen: React.FC = () => {
             <div className="absolute z-10 flex flex-col items-center justify-center text-pip animate-pulse-fast select-none pointer-events-none">
                 <Radio size={56} strokeWidth={1.5} className="drop-shadow-[0_0_3px_rgba(65,255,0,0.7)]" />
                 <span className="mt-3 text-xs font-bold tracking-[0.3em] uppercase opacity-80 drop-shadow-md">
-                    LIVE FEED
+                    {t.radioScreen.liveFeed}
                 </span>
             </div>
 
@@ -112,7 +114,7 @@ const RadioScreen: React.FC = () => {
             </div>
             <div className="flex items-center gap-2 mt-2 text-sm font-mono tracking-widest">
                 <Signal size={16} className="animate-pulse" />
-                <span>TUNING: 67.5 MHz</span>
+                <span>{t.radioScreen.tuning}TUNING: 67.5 MHz</span>
             </div>
         </div>
     </div>
