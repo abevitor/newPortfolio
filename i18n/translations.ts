@@ -31,6 +31,16 @@ export const translations = {
             signalFound: 'SINAL ENCONTRADO',
             liveFeed: 'AO VIVO',
             tuning: 'SINTONIA',
-        }
+        },
+        contactForm: {
+            title: 'Transmitir Mensagem',
+            name: 'NOME',
+            email: 'EMAIL',
+            message: 'MENSAGEM',
+            sending: 'Enviando...',
+            sucess: 'Enviado!',
+            error: 'Erro, tente novamente',
+            send: 'Enviar',
+        },
     }
 }
