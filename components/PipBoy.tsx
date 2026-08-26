@@ -5,6 +5,7 @@ import StatScreen from './screens/StatScreen';
 import DataScreen from './screens/DataScreen';
 import RadioScreen from './screens/RadioScreen';
 import MapScreen from './screens/MapScreen';
+import LanguageToggle from './screens/LanguageToggle';
 
 // Navigation Structure
 type Section = {
@@ -141,7 +142,7 @@ const PipBoy: React.FC = () => {
               <button
                 key={sub}
                 onClick={() => handleSubClick(sub)}
-                className={`uppercase transition-colors whitespace-nowrap ${activeSub === sub ? 'text-pip font-bold drop-shadow-[0_0_5px_rgba(16,185,129,0.8)]' : 'text-pip/40 hover:text-pip/70'}`}
+                className={`uppercase transition-colors whitespace-nowrap ${activeSub === sub ? 'text-pip font-bold drop-shadow-[0_0_5px_rgba(65,255,0,0.8)]' : 'text-pip/40 hover:text-pip/70'}`}
               >
                 {sub}
               </button>
@@ -155,7 +156,7 @@ const PipBoy: React.FC = () => {
               <button
                 key={sub}
                 onClick={() => handleSubClick(sub)}
-                className={`uppercase transition-colors whitespace-nowrap ${activeSub === sub ? 'text-pip font-bold drop-shadow-[0_0_5px_rgba(16,185,129,0.8)]' : 'text-pip/40 hover:text-pip/70'}`}
+                className={`uppercase transition-colors whitespace-nowrap ${activeSub === sub ? 'text-pip font-bold drop-shadow-[0_0_5px_rgba(65,255,0,0.8)]' : 'text-pip/40 hover:text-pip/70'}`}
               >
                 {sub}
               </button>
@@ -165,7 +166,7 @@ const PipBoy: React.FC = () => {
       case 'MAP':
         return (
             <div className="flex gap-6 mb-4 text-xl overflow-x-auto scrollbar-hide opacity-50 cursor-default">
-                <span className="text-pip font-bold drop-shadow-[0_0_5px_rgba(16,185,129,0.8)]">GEOLOCATION</span>
+                <span className="text-pip font-bold drop-shadow-[0_0_5px_rgba(65,255,0,0.8)]">GEOLOCATION</span>
             </div>
         );
       default:
@@ -192,7 +193,7 @@ const PipBoy: React.FC = () => {
               {activeTab === tab && (
                 <motion.div
                   layoutId="underline"
-                  className="absolute left-0 right-0 -bottom-[6px] h-[3px] bg-pip shadow-[0_0_10px_#10b981]"
+                  className="absolute left-0 right-0 -bottom-[6px] h-[3px] bg-pip shadow-[0_0_10px_#41ff00]"
                   transition={{ type: "spring", stiffness: 300, damping: 30 }}
                 />
               )}
@@ -202,6 +203,7 @@ const PipBoy: React.FC = () => {
         <div className="hidden md:block text-pip text-sm font-bold opacity-80 pt-2 shrink-0 ml-4">
             PIP-BOY 3000
         </div>
+        <LanguageToggle />
       </nav>
 
       {/* SUB NAVIGATION */}
@@ -210,7 +212,7 @@ const PipBoy: React.FC = () => {
       </div>
 
       {/* MAIN SCREEN AREA */}
-      <main className="flex-1 overflow-hidden relative border-2 border-pip/20 mx-0 sm:mx-4 mb-2 p-2 sm:p-4 bg-[rgba(16,185,129,0.02)] shadow-inner">
+      <main className="flex-1 overflow-hidden relative border-2 border-pip/20 mx-0 sm:mx-4 mb-2 p-2 sm:p-4 bg-[rgba(65,255,0,0.02)] shadow-inner">
         <AnimatePresence mode='wait'>
           <motion.div
             key={currentIndex}
