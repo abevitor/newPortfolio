@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { DataSubTab, Quest, ProjectItem, Achievement } from '../../types';
 import { QUESTS, PROJECTS, ACHIEVEMENTS } from '../../data';
 import { CheckSquare, Square, Wrench, Trophy, Calendar, ExternalLink, X, FileText, Download } from 'lucide-react';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   'pdfjs-dist/build/pdf.worker.min.mjs',
@@ -28,6 +29,7 @@ const DataScreen: React.FC<DataScreenProps> = ({ activeSubTab }) => {
 };
 
 const QuestsView: React.FC = () => {
+  const { t } = useLanguage();
   const [selectedQuest, setSelectedQuest] = useState<Quest>(QUESTS[0]);
 
   return (
@@ -96,6 +98,7 @@ const QuestsView: React.FC = () => {
 };
 
 const ProjectsView: React.FC = () => {
+  const { t } = useLanguage();
     const [selectedProject, setSelectedProject] = useState<ProjectItem>(PROJECTS[0]);
   
     return (
@@ -177,6 +180,7 @@ interface PdfModalProps{
 }
 
 const PdfModal: React.FC<PdfModalProps> = ({url, title, onClose}) => {
+  const { t } = useLanguage();
   const [isClosing, setIsClosing] = useState(false);
   const [numPages, SetNumPages] = useState(0);
   const [pageNumber, setPageNumber] = useState(1);
@@ -272,6 +276,7 @@ const PdfModal: React.FC<PdfModalProps> = ({url, title, onClose}) => {
 
 
 const AchievementsView: React.FC = () => {
+  const { t } = useLanguage();
     const [viewingPdf, setViewingPdf] = useState<{ url: string; title: string } | null>(null);
 
     return (
