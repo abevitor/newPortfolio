@@ -5,6 +5,7 @@ import {
   Layout, Eye, Server, Smile, Brain, Zap, Clover, Cloud, Users, Palette, Shield,
   User, Code, Terminal, Database, Box, PenTool, Layers, Bug, Atom, Award, ExternalLink, MessageCircleMore, Glasses, Handshake
 } from 'lucide-react';
+import { useLanguage } from '@/i18n/LanguageContext';
 const PROGRAMMER_BOY_URL = "/images/fallout_significado_vault_boy_thumbs_up__4ybskp0-removebg-preview.png";
 
 
@@ -32,6 +33,7 @@ const IconMap: Record<string, React.ElementType> = {
 };
 
 const StatusView: React.FC = () => {
+  const { t } = useLanguage();
   const [imgError, setImgError] = useState(false);
 
   return (
@@ -40,7 +42,7 @@ const StatusView: React.FC = () => {
        {/* Top Summary */}
        <div className="text-center space-y-1 z-10 w-full border-b border-pip/20 pb-2">
           <h2 className="text-xl sm:text-2xl font-bold tracking-widest text-pip drop-shadow-[0_0_5px_rgba(16,185,129,0.8)]">
-            SOFTWARE ENGINEER
+             {t.statusView.role}SOFTWARE ENGINEER
           </h2>
        </div>
 
