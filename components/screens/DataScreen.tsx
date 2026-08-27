@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { DataSubTab, Quest, ProjectItem, Achievement } from '../../types';
 import { QUESTS, PROJECTS, ACHIEVEMENTS } from '../../data';
 import { CheckSquare, Square, Wrench, Trophy, Calendar, ExternalLink, X, FileText, Download } from 'lucide-react';
-import { useLanguage } from '../../i18n/LanguageContext';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   'pdfjs-dist/build/pdf.worker.min.mjs',
@@ -29,7 +29,7 @@ const DataScreen: React.FC<DataScreenProps> = ({ activeSubTab }) => {
 };
 
 const QuestsView: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [selectedQuest, setSelectedQuest] = useState<Quest>(QUESTS[0]);
 
   return (
@@ -54,7 +54,7 @@ const QuestsView: React.FC = () => {
           >
             <div className="flex items-center gap-2">
                 <span className={`w-3 h-3 bg-pip ${selectedQuest.id === quest.id ? 'animate-pulse' : 'opacity-0'}`}></span>
-                {quest.title}
+                {quest.title[language]}
             </div>
           </button>
         ))}
@@ -68,16 +68,16 @@ const QuestsView: React.FC = () => {
         overflow-y-auto
       ">
         <div className="flex justify-between items-end border-b-2 border-pip mb-4 pb-2 shrink-0">
-           <h2 className="text-xl md:text-2xl font-bold uppercase">{selectedQuest.title}</h2>
+           <h2 className="text-xl md:text-2xl font-bold uppercase">{selectedQuest.title[language]}</h2>
            {selectedQuest.status === 'completed' && <span className="bg-pip text-black px-2 text-xs md:text-sm font-bold">{t.dataScreen.completed}</span>}
         </div>
 
         {/* Quest Image / Visual Placeholder */}
         <div className="mb-4 bg-pip/10 p-4 border border-pip/30 rounded min-h-[80px] shrink-0">
-            <p className="text-lg italic leading-relaxed">"{selectedQuest.summary}"</p>
+            <p className="text-lg italic leading-relaxed">"{selectedQuest.summary[language]}"</p>
         </div>
         
-        <p className="mb-6 opacity-90 text-lg">{selectedQuest.description}</p>
+        <p className="mb-6 opacity-90 text-lg">{selectedQuest.description[language]}</p>
 
         <div className="mt-auto">
             <h3 className="text-xl border-b border-pip/50 mb-3 pb-1">{t.dataScreen.objectives}</h3>
@@ -87,7 +87,7 @@ const QuestsView: React.FC = () => {
                         <div className="mt-1 flex-shrink-0">
                             {step.completed ? <CheckSquare size={20} /> : <Square size={20} />}
                         </div>
-                        <span>{step.text}</span>
+                        <span>{step.text[language]}</span>
                     </li>
                 ))}
             </ul>
@@ -238,7 +238,6 @@ const PdfModal: React.FC<PdfModalProps> = ({url, title, onClose}) => {
           </Document>
           </div>
 
-          {/* Navegação de páginas, só aparece se tiver mais de 1 página */}
         {numPages > 1 && (
           <div className="flex justify-center items-center gap-4 text-pip font-mono py-2 border-t border-pip/30 shrink-0">
             <button 
@@ -273,7 +272,6 @@ const PdfModal: React.FC<PdfModalProps> = ({url, title, onClose}) => {
     </div>
   );
 };
-
 
 const AchievementsView: React.FC = () => {
   const { t } = useLanguage();

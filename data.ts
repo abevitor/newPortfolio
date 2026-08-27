@@ -1,4 +1,3 @@
-
 import { Skill, Perk, Quest, InventoryItem, ProjectItem, Achievement } from './types';
 
 export const SKILLS: Skill[] = [
@@ -85,9 +84,6 @@ export const PERKS: Perk[] = [
     description: "Experiência colaborando em projetos de grupo.",
     iconName: 'Handshake',
   },
-
-  
-
 ];
 
 export const PROJECTS: ProjectItem[] = [
@@ -133,7 +129,6 @@ export const PROJECTS: ProjectItem[] = [
     description: "Projeto CRUD.",
     link: 'https://github.com/abevitor/JDBC_DIO'
   },
-  
   {
     id: 'p-Docker',
     title: 'Projeto Docker',
@@ -188,48 +183,132 @@ export const ACHIEVEMENTS: Achievement[] = [
 export const QUESTS: Quest[] = [
   {
     id: 'q-fatec-monitor',
-    title: 'Monitor Sala ADA',
-    summary: 'FATEC - Carapicuíba',
-    description: "Suporte técnico e infraestrutura de TI, atendendo usuários e mantendo os equipamentos do laboratório em funcionamento.",
+    title: { pt: 'Monitor Sala ADA', en: 'ADA Lab Monitor' },
+    summary: { pt: 'FATEC - Carapicuíba', en: 'FATEC - Carapicuíba' },
+    description: {
+      pt: "Suporte técnico e infraestrutura de TI, atendendo usuários e mantendo os equipamentos do laboratório em funcionamento.",
+      en: "Technical support and IT infrastructure, assisting users and keeping lab equipment running smoothly."
+    },
     date: 'Ago 2025 - Dez 2025',
     status: 'completed',
     steps: [
-      { text: 'Suporte técnico a usuários e manutenção de equipamentos', completed: true },
-      { text: 'Diagnóstico de falhas e substituição de componentes', completed: true },
-      { text: 'Formatação, instalação e configuração de SO e softwares', completed: true },
-      { text: 'Montagem e manutenção de redes (crimpagem RJ45, keystones)', completed: true },
-      { text: 'Criação de mídias bootáveis com Ventoy', completed: true }
+      {
+        text: {
+          pt: 'Suporte técnico a usuários e manutenção de equipamentos',
+          en: 'User technical support and equipment maintenance'
+        },
+        completed: true
+      },
+      {
+        text: {
+          pt: 'Diagnóstico de falhas e substituição de componentes',
+          en: 'Fault diagnosis and component replacement'
+        },
+        completed: true
+      },
+      {
+        text: {
+          pt: 'Formatação, instalação e configuração de SO e softwares',
+          en: 'OS and software formatting, installation and configuration'
+        },
+        completed: true
+      },
+      {
+        text: {
+          pt: 'Montagem e manutenção de redes (crimpagem RJ45, keystones)',
+          en: 'Network setup and maintenance (RJ45 crimping, keystones)'
+        },
+        completed: true
+      },
+      {
+        text: {
+          pt: 'Criação de mídias bootáveis com Ventoy',
+          en: 'Creation of bootable media with Ventoy'
+        },
+        completed: true
+      }
     ]
   },
-    {
+  {
     id: 'q-fateclog',
-    title: 'Artigo Acadêmico - FATECLOG',
-    summary: 'XVI FATECLOG 2025',
-    description: "Investiga como a Inteligência Artificial transforma a segurança privada via PLN: benefícios como automação e agilidade na análise de dados, e limites como vieses e impacto no mercado de trabalho, com foco no uso ético de IAs.",
+    title: { pt: 'Artigo Acadêmico - FATECLOG', en: 'Academic Paper - FATECLOG' },
+    summary: { pt: 'XVI FATECLOG 2025', en: 'XVI FATECLOG 2025' },
+    description: {
+      pt: "Investiga como a Inteligência Artificial transforma a segurança privada via PLN: benefícios como automação e agilidade na análise de dados, e limites como vieses e impacto no mercado de trabalho, com foco no uso ético de IAs.",
+      en: "Investigates how Artificial Intelligence transforms private security through NLP: benefits like automation and faster data analysis, and limitations like bias and job market impact, with a focus on the ethical use of AI."
+    },
     date: '2025',
     status: 'completed',
     steps: [
-      { text: 'Pesquisa e revisão bibliográfica sobre IA e PLN', completed: true },
-      { text: 'Redação do artigo científico', completed: true },
-      { text: 'Apresentação no XVI FATECLOG', completed: true },
-      { text: 'Nota máxima na avaliação', completed: true }
+      {
+        text: {
+          pt: 'Pesquisa e revisão bibliográfica sobre IA e PLN',
+          en: 'Research and literature review on AI and NLP'
+        },
+        completed: true
+      },
+      {
+        text: {
+          pt: 'Redação do artigo científico',
+          en: 'Writing of the scientific paper'
+        },
+        completed: true
+      },
+      {
+        text: {
+          pt: 'Apresentação no XVI FATECLOG',
+          en: 'Presentation at XVI FATECLOG'
+        },
+        completed: true
+      },
+      {
+        text: {
+          pt: 'Nota máxima na avaliação',
+          en: 'Highest grade in the evaluation'
+        },
+        completed: true
+      }
     ]
   },
-   {
+  {
     id: 'q-fatec-ads',
-    title: 'Análise e Desenvolvimento de Sistemas',
-    summary: 'FATEC - Carapicuíba',
-    description: "Formação superior em ADS, com foco em desenvolvimento back-end em Java, programação orientada a objetos e boas práticas de engenharia de software.",
+    title: { pt: 'Análise e Desenvolvimento de Sistemas', en: 'Systems Analysis and Development' },
+    summary: { pt: 'FATEC - Carapicuíba', en: 'FATEC - Carapicuíba' },
+    description: {
+      pt: "Formação superior em ADS, com foco em desenvolvimento back-end em Java, programação orientada a objetos e boas práticas de engenharia de software.",
+      en: "Bachelor's degree in Systems Analysis and Development, focused on Java back-end development, object-oriented programming and software engineering best practices."
+    },
     date: '2023 - 2027',
     status: 'active',
     steps: [
-      { text: 'Programação Orientada a Objetos', completed: true },
-      { text: 'APIs REST e Spring Boot', completed: true },
-      { text: 'Sistemas Operacionais', completed: true },
-      { text: 'Engenharia de Software', completed: true },
-      { text: 'Lógica de Programação', completed: true },
-      { text: 'Banco de Dados (MySQL)', completed: true },
-      { text: 'Conclusão prevista para 2027', completed: false }
+      {
+        text: { pt: 'Programação Orientada a Objetos', en: 'Object-Oriented Programming' },
+        completed: true
+      },
+      {
+        text: { pt: 'APIs REST e Spring Boot', en: 'REST APIs and Spring Boot' },
+        completed: true
+      },
+      {
+        text: { pt: 'Sistemas Operacionais', en: 'Operating Systems' },
+        completed: true
+      },
+      {
+        text: { pt: 'Engenharia de Software', en: 'Software Engineering' },
+        completed: true
+      },
+      {
+        text: { pt: 'Lógica de Programação', en: 'Programming Logic' },
+        completed: true
+      },
+      {
+        text: { pt: 'Banco de Dados (MySQL)', en: 'Databases (MySQL)' },
+        completed: true
+      },
+      {
+        text: { pt: 'Conclusão prevista para 2027', en: 'Expected graduation in 2027' },
+        completed: false
+      }
     ]
   }
 ];

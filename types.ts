@@ -25,13 +25,13 @@ export interface QuestStep {
 }
 
 export interface Quest {
-  id: string;
-  title: string;
-  summary: string;
-  description: string;
-  steps: QuestStep[];
-  date: string;
+  title: { pt: string; en: string };
+  summary: { pt: string; en: string };
+  description: { pt: string; en: string };
+  steps: { text: { pt: string; en: string }; completed: boolean }[];
+  date: string; // datas/números podem continuar como string simples
   status: 'active' | 'completed';
+  id: string;
 }
 
 export interface ProjectItem {
