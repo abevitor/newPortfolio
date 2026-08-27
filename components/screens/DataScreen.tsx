@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { DataSubTab, Quest, ProjectItem, Achievement } from '../../types';
 import { QUESTS, PROJECTS, ACHIEVEMENTS } from '../../data';
 import { CheckSquare, Square, Wrench, Trophy, Calendar, ExternalLink, X, FileText, Download } from 'lucide-react';
-import { useLanguage } from '@/i18n/LanguageContext';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   'pdfjs-dist/build/pdf.worker.min.mjs',
@@ -48,7 +48,7 @@ const QuestsView: React.FC = () => {
             onClick={() => setSelectedQuest(quest)}
             className={`w-full text-left p-3 mb-1 font-mono uppercase transition-all duration-100 border-l-4 shrink-0 ${
               selectedQuest.id === quest.id 
-                ? 'bg-pip/20 border-pip text-pip font-bold shadow-[0_0_10px_rgba(16,185,129,0.2)]' 
+                ? 'bg-pip/20 border-pip text-pip font-bold shadow-[0_0_10px_rgba(65,255,0,0.2)]' 
                 : 'border-transparent text-pip/70 hover:bg-pip/10 hover:text-pip hover:border-pip/50'
             }`}
           >
@@ -69,7 +69,7 @@ const QuestsView: React.FC = () => {
       ">
         <div className="flex justify-between items-end border-b-2 border-pip mb-4 pb-2 shrink-0">
            <h2 className="text-xl md:text-2xl font-bold uppercase">{selectedQuest.title}</h2>
-           {selectedQuest.status === 'completed' && <span className="bg-pip text-black px-2 text-xs md:text-sm font-bold">COMPLETED</span>}
+           {selectedQuest.status === 'completed' && <span className="bg-pip text-black px-2 text-xs md:text-sm font-bold">{t.dataScreen.completed}</span>}
         </div>
 
         {/* Quest Image / Visual Placeholder */}
@@ -80,7 +80,7 @@ const QuestsView: React.FC = () => {
         <p className="mb-6 opacity-90 text-lg">{selectedQuest.description}</p>
 
         <div className="mt-auto">
-            <h3 className="text-xl border-b border-pip/50 mb-3 pb-1">OBJECTIVES</h3>
+            <h3 className="text-xl border-b border-pip/50 mb-3 pb-1">{t.dataScreen.objectives}</h3>
             <ul className="space-y-3 pb-4">
                 {selectedQuest.steps.map((step, idx) => (
                     <li key={idx} className={`flex items-start gap-3 text-lg ${step.completed ? 'opacity-50' : 'opacity-100'}`}>
@@ -117,7 +117,7 @@ const ProjectsView: React.FC = () => {
               onClick={() => setSelectedProject(project)}
               className={`w-full text-left p-3 mb-1 font-mono uppercase transition-all duration-100 border-l-4 shrink-0 ${
                 selectedProject.id === project.id 
-                  ? 'bg-pip/20 border-pip text-pip font-bold shadow-[0_0_10px_rgba(16,185,129,0.2)]' 
+                  ? 'bg-pip/20 border-pip text-pip font-bold shadow-[0_0_10px_rgba(65,255,0,0.2)]' 
                   : 'border-transparent text-pip/70 hover:bg-pip/10 hover:text-pip hover:border-pip/50'
               }`}
             >
@@ -138,13 +138,13 @@ const ProjectsView: React.FC = () => {
         ">
            <div className="border-b-2 border-pip mb-4 pb-2 shrink-0">
              <h2 className="text-xl md:text-2xl font-bold uppercase">{selectedProject.title}</h2>
-             <span className="text-sm opacity-60">FEATURED PROJECT</span>
+             <span className="text-sm opacity-60">{t.dataScreen.featuredProject}</span>
            </div>
 
            <div className="flex flex-wrap gap-2 mb-6 shrink-0">
-               {selectedProject.tech.map(t => (
-                   <span key={t} className="px-2 py-1 border border-pip/50 text-sm bg-pip/10 rounded">
-                       {t}
+               {selectedProject.tech.map(techItem => (
+                   <span key={techItem} className="px-2 py-1 border border-pip/50 text-sm bg-pip/10 rounded">
+                       {techItem}
                    </span>
                ))}
            </div>
@@ -161,11 +161,11 @@ const ProjectsView: React.FC = () => {
                  rel="noopener noreferrer"
                  className="flex items-center gap-2 bg-pip text-black px-4 py-2 font-bold hover:bg-pip-light transition-colors"
                >
-                 <span>ACCESS TERMINAL</span>
+                 <span>{t.dataScreen.accessTerminal}</span>
                  <ExternalLink size={16} />
                </a>
              ) : (
-               <div className="animate-pulse text-sm">[ LINK UNAVAILABLE ]</div>
+               <div className="animate-pulse text-sm">[ {t.dataScreen.linkUnavailable} ]</div>
              )}
            </div>
         </div>
@@ -182,7 +182,7 @@ interface PdfModalProps{
 const PdfModal: React.FC<PdfModalProps> = ({url, title, onClose}) => {
   const { t } = useLanguage();
   const [isClosing, setIsClosing] = useState(false);
-  const [numPages, SetNumPages] = useState(0);
+  const [numPages, setNumPages] = useState(0);
   const [pageNumber, setPageNumber] = useState(1);
 
   useEffect(() => {
@@ -230,15 +230,15 @@ const PdfModal: React.FC<PdfModalProps> = ({url, title, onClose}) => {
         <div className="flex-1 bg-black/40 overflow-auto flex justify-center items-start p-4">
         <Document
         file={url}
-        onLoadSuccess={({numPages}) => SetNumPages(numPages)}
-        loading={<span className="text-pip font-mono anime-pulse">Carregando PDF...</span>}
-        error={<span className="text-pip font-mono">Erro ao carregar o PDF</span>}
+        onLoadSuccess={({numPages}) => setNumPages(numPages)}
+        loading={<span className="text-pip font-mono animate-pulse">{t.dataScreen.carregandoPdf}</span>}
+        error={<span className="text-pip font-mono">{t.dataScreen.erroPdf}</span>}
         >
           <Page pageNumber={pageNumber} />
           </Document>
           </div>
 
-          {/* NOVO: navegação de páginas, só aparece se tiver mais de 1 página */}
+          {/* Navegação de páginas, só aparece se tiver mais de 1 página */}
         {numPages > 1 && (
           <div className="flex justify-center items-center gap-4 text-pip font-mono py-2 border-t border-pip/30 shrink-0">
             <button 
@@ -246,7 +246,7 @@ const PdfModal: React.FC<PdfModalProps> = ({url, title, onClose}) => {
               disabled={pageNumber <= 1}
               className="px-3 py-1 border border-pip hover:bg-pip hover:text-black transition-colors disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-pip"
             >
-              Anterior
+              {t.dataScreen.anterior}
             </button>
             <span>{pageNumber} / {numPages}</span>
             <button 
@@ -254,7 +254,7 @@ const PdfModal: React.FC<PdfModalProps> = ({url, title, onClose}) => {
               disabled={pageNumber >= numPages}
               className="px-3 py-1 border border-pip hover:bg-pip hover:text-black transition-colors disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-pip"
             >
-              Próxima
+              {t.dataScreen.proxima}
             </button>
           </div>
         )}
@@ -266,7 +266,7 @@ const PdfModal: React.FC<PdfModalProps> = ({url, title, onClose}) => {
             className="inline-flex items-center gap-2 bg-pip text-black px-4 py-1 text-sm font-bold hover:bg-pip-light transition-colors uppercase"
           >
             <Download size={16} />
-            Baixar PDF
+            {t.dataScreen.baixarPdf}
           </a>
         </div>
       </div>
@@ -306,7 +306,7 @@ const AchievementsView: React.FC = () => {
                                   onClick={() => setViewingPdf({ url: ach.pdfUrl!, title: ach.title })}
                                   className="inline-flex items-center gap-2 bg-pip text-black px-4 py-1 text-sm font-bold hover:bg-pip-light transition-colors uppercase"
                                 >
-                                  Visualizar PDF
+                                  {t.dataScreen.visualizarPdf}
                                 </button>
 
                                 <a 
@@ -314,7 +314,7 @@ const AchievementsView: React.FC = () => {
                                   download
                                   className="inline-flex items-center gap-2 border-2 border-pip text-pip px-4 py-1 text-sm font-bold hover:bg-pip/10 transition-colors uppercase"
                                 >
-                                  Baixar PDF
+                                  {t.dataScreen.baixarPdf}
                                 </a>
                               </div>
                             )}
