@@ -13,7 +13,7 @@ export const translations = {
         dataScreen: {
             objectives: 'OBJETIVOS',
             completed: 'CONCLUÍDO',
-            acessTerminal: 'ACESSAR TERMINAL',
+            accessTerminal: 'ACESSAR TERMINAL',
             linkUnavailable: 'LINK INDISPONÍVEL',
             featuredProject: 'PROJETO EM DESTAQUE',
             visualizarPdf: 'Visualizar PDF',
@@ -58,7 +58,7 @@ export const translations = {
         dataScreen: {
             objectives: 'OBJECTIVES',
             completed: 'COMPLETED',
-            acessTerminal: 'ACESS TERMINAL',
+            accessTerminal: 'ACESS TERMINAL',
             linkUnavailable: 'LINK UNAVAILABLE',
             featuredProject: 'FEATURED PROJECT',
             visualizarPdf: 'View PDF',
