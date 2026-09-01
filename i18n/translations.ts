@@ -9,6 +9,26 @@ export const translations = {
         },
         statusView: {
             role: 'ENGENHEIRO DE SOFTWARE',
+            description: "Especializado em desenvolvimento backend e na criação de soluções eficientes com Java e Spring Boot. Atualmente, estou expandindo meus conhecimentos em Inteligência Artificial e LLMs, transformando aprendizado em projetos práticos e buscando construir aplicações úteis, escaláveis e bem estruturadas.",
+},
+mapScreen: {
+  positionLocked: 'Posição Travada',
+  localMapData: 'Dados do Mapa Local',
+  currentLocation: '[LOCALIZAÇÃO ATUAL]',
+  locations: {
+    saoPaulo: 'São Paulo',
+    carapicuiba: 'Carapicuíba',
+    brazil: 'Brasil',
+    southAmerica: 'América do Sul',
+    earth: 'Terra (Terceiro Planeta, Sistema Solar)',
+    solarSystem: 'Sistema Solar',
+    localCloud: 'Nuvem Interestelar Local',
+    orionArm: 'Braço de Órion, Via Láctea',
+    localGroup: 'Grupo Local',
+    laniakea: 'Superaglomerado de Laniakea',
+    cosmicWeb: 'Teia Cósmica',
+    observableUniverse: 'Universo Observável',
+  },
         },
         dataScreen: {
             objectives: 'OBJETIVOS',
@@ -54,7 +74,28 @@ export const translations = {
         },
         statusView: {
             role: 'SOFTWARE ENGINEER',
+            description: "Specialized in backend development and building efficient solutions with Java and Spring Boot. I'm currently expanding my knowledge of Artificial Intelligence and LLMs, turning what I learn into practical projects and aiming to build useful, scalable, well-structured applications.",
         },
+        mapScreen: {
+  positionLocked: 'Position Locked',
+  localMapData: 'Local Map Data',
+  currentLocation: '[CURRENT LOCATION]',
+  locations: {
+    saoPaulo: 'São Paulo',
+    carapicuiba: 'Carapicuíba',
+    brazil: 'Brazil',
+    southAmerica: 'South America',
+    earth: 'Earth (Third Planet, Sol System)',
+    solarSystem: 'Solar System',
+    localCloud: 'Local Interstellar Cloud',
+    orionArm: 'Orion Arm, Milky Way Galaxy',
+    localGroup: 'Local Group',
+    laniakea: 'Laniakea Supercluster',
+    cosmicWeb: 'Cosmic Web',
+    observableUniverse: 'Observable Universe',
+  },
+},
+
         dataScreen: {
             objectives: 'OBJECTIVES',
             completed: 'COMPLETED',
