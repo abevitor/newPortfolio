@@ -41,7 +41,7 @@ const StatusView: React.FC = () => {
        
        {/* Top Summary */}
        <div className="text-center space-y-1 z-10 w-full border-b border-pip/20 pb-2">
-          <h2 className="text-xl sm:text-2xl font-bold tracking-widest text-pip drop-shadow-[0_0_5px_rgba(16,185,129,0.8)]">
+          <h2 className="text-xl sm:text-2xl font-bold tracking-widest text-pip drop-shadow-[0_0_5px_rgba(65,255,0,0.8)]">
              {t.statusView.role}
           </h2>
        </div>
@@ -68,7 +68,6 @@ const StatusView: React.FC = () => {
                  alt="Programmer Character"
                  className="h-full w-full object-contain animate-flicker"
                  style={{
-                    // Filter turns white content to Pip-Boy green (#10b981)
                     filter: 'brightness(0) saturate(100%) invert(58%) sepia(87%) saturate(365%) hue-rotate(101deg) brightness(92%) contrast(92%) drop-shadow-[0_0_2px_rgba(65,255,0,0.7)]',
                     maskImage: 'repeating-linear-gradient(black, black 2px, transparent 3px)',
                     WebkitMaskImage: 'repeating-linear-gradient(black, black 2px, transparent 3px)',
@@ -78,7 +77,7 @@ const StatusView: React.FC = () => {
                />
              ) : (
                <div className="flex flex-col items-center justify-center animate-flicker opacity-80 text-pip h-full w-full p-4">
-                  <User className="w-full h-full drop-shadow-[0_0_10px_rgba(16,185,129,0.8)]" strokeWidth={1} />
+                  <User className="w-full h-full drop-shadow-[0_0_10px_rgba(65,255,0,0.8)]" strokeWidth={1} />
                </div>
              )}
           </div>
@@ -89,13 +88,13 @@ const StatusView: React.FC = () => {
           
           {/* Description */}
           <div className="w-full max-w-2xl text-center px-4">
-             <p className="text-pip text-sm sm:text-xl font-mono leading-relaxed opacity-90 drop-shadow-[0_0_2px_rgba(16,185,129,0.5)]">
-                "Especializado em desenvolvimento backend e na criação de soluções eficientes com Java e Spring Boot. Atualmente, estou expandindo meus conhecimentos em Inteligência Artificial e LLMs, transformando aprendizado em projetos práticos e buscando construir aplicações úteis, escaláveis e bem estruturadas."
+             <p className="text-pip text-sm sm:text-xl font-mono leading-relaxed opacity-90 drop-shadow-[0_0_2px_rgba(65,255,0,0.5)]">
+                "{t.statusView.description}"
              </p>
           </div>
 
           {/* Name Display */}
-          <div className="text-xl sm:text-3xl font-bold uppercase tracking-[0.2em] text-pip drop-shadow-[0_0_8px_rgba(16,185,129,1)]">
+          <div className="text-xl sm:text-3xl font-bold uppercase tracking-[0.2em] text-pip drop-shadow-[0_0_8px_rgba(65,255,0,1)]">
                VITOR ABE PRATES
           </div>
        </div>
@@ -105,6 +104,7 @@ const StatusView: React.FC = () => {
 }
 
 const SpecialView: React.FC = () => {
+  const { t } = useLanguage();
   const [selectedSkill, setSelectedSkill] = useState<Skill>(SKILLS[0]);
 
   const CurrentIcon = IconMap[selectedSkill.iconName] || Shield;
@@ -136,7 +136,6 @@ const SpecialView: React.FC = () => {
                 alt={selectedSkill.name}
                 className="w-32 h-32 sm:w-40 sm:h-40 object-contain animate-pulse-fast drop-shadow-[0_0_8px_rgba(65,255,0,0.8)]"
                 style={{
-                 
                   filter: 'brightness(0) saturate(100%) invert(64%) sepia(97%) saturate(1980%) hue-rotate(70deg) brightness(103%) contrast(103%) drop-shadow(0 0 5px rgba(65,255,0,0.8))'
                 }}
              />
@@ -155,6 +154,7 @@ const SpecialView: React.FC = () => {
 };
 
 const PerksView: React.FC = () => {
+  const { t } = useLanguage();
   const [selectedPerk, setSelectedPerk] = useState<Perk>(PERKS[0]);
   const CurrentIcon = IconMap[selectedPerk.iconName] || Shield;
 
@@ -189,7 +189,7 @@ const PerksView: React.FC = () => {
                 
                 {selectedPerk.issuer && (
                    <div className="text-sm opacity-70 mb-2 uppercase tracking-wide">
-                      Issuer: {selectedPerk.issuer}
+                      {t.perksView.issuer}: {selectedPerk.issuer}
                    </div>
                 )}
 
