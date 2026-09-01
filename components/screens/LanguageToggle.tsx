@@ -7,7 +7,7 @@ const LanguageToggle: React.FC = () => {
     return (
         <button
           onClick={toggleLanguage}
-          className="border border-pip text-pip px-2 py-1 text-xs font-mono -uppercase hover:bg-pip hover:text-black transition-colors shrink-0"
+          className="border border-pip text-pip px-2 py-1 text-xs font-mono uppercase hover:bg-pip hover:text-black transition-colors shrink-0"
           >
             {language === 'pt' ? 'EN' : 'PT'}
           </button>

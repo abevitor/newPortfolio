@@ -42,7 +42,7 @@ const StatusView: React.FC = () => {
        {/* Top Summary */}
        <div className="text-center space-y-1 z-10 w-full border-b border-pip/20 pb-2">
           <h2 className="text-xl sm:text-2xl font-bold tracking-widest text-pip drop-shadow-[0_0_5px_rgba(16,185,129,0.8)]">
-             {t.statusView.role}SOFTWARE ENGINEER
+             {t.statusView.role}
           </h2>
        </div>
 
