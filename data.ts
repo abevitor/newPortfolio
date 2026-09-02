@@ -3,57 +3,78 @@ import { Skill, Perk, Quest, InventoryItem, ProjectItem, Achievement } from './t
 export const SKILLS: Skill[] = [
   {
     id: 'java',
-    name: 'Java',
+    name: { pt: 'Java', eng: 'Java' },
     level: 9,
-    description: "Linguagem orientada a objetos conhecida por sua robustez e portabilidade. Amplamente utilizada no desenvolvimento de aplicações e sistemas backend.",
+    description: {
+      pt: "Linguagem orientada a objetos conhecida por sua robustez e portabilidade. Amplamente utilizada no desenvolvimento de aplicações e sistemas backend.",
+      eng: "Object-oriented language known for its robustness and portability. Widely used in application and backend systems development."
+    },
     iconName: 'Code',
     logoUrl: 'images/226777.png'
   },
   {
     id: 'python',
-    name: 'Python',
+    name: { pt: 'Python', eng: 'Python' },
     level: 8,
-    description: "Linguagem versátil e conhecida pela simplicidade e legibilidade. Muito utilizada em automação, análise de dados e desenvolvimento de aplicações.",
+    description: {
+      pt: "Linguagem versátil e conhecida pela simplicidade e legibilidade. Muito utilizada em automação, análise de dados e desenvolvimento de aplicações.",
+      eng: "Versatile language known for its simplicity and readability. Widely used in automation, data analysis and application development."
+    },
     iconName: 'Code',
     logoUrl: 'images/python-removebg-preview.png'
   },
   {
     id: 'aws',
-    name: 'AWS',
+    name: { pt: 'AWS', eng: 'AWS' },
     level: 9,
-    description: "Plataforma de computação em nuvem com diversos serviços para infraestrutura e aplicações. Permite criar soluções escaláveis, seguras e flexíveis.",
+    description: {
+      pt: "Plataforma de computação em nuvem com diversos serviços para infraestrutura e aplicações. Permite criar soluções escaláveis, seguras e flexíveis.",
+      eng: "Cloud computing platform with a wide range of infrastructure and application services. Enables scalable, secure and flexible solutions."
+    },
     iconName: 'Plataform',
     logoUrl: 'images/aws.png'
   },
   {
     id: 'mySQL',
-    name: 'mySQL',
+    name: { pt: 'mySQL', eng: 'mySQL' },
     level: 8,
-    description: "Sistema de gerenciamento de banco de dados relacional conhecido por desempenho e confiabilidade. Utilizado para armazenar e organizar dados de aplicações.",
+    description: {
+      pt: "Sistema de gerenciamento de banco de dados relacional conhecido por desempenho e confiabilidade. Utilizado para armazenar e organizar dados de aplicações.",
+      eng: "Relational database management system known for performance and reliability. Used to store and organize application data."
+    },
     iconName: 'database',
     logoUrl: 'images/sql-removebg-preview (1).png'
   },
   {
     id: 'Springboot',
-    name: 'Springboot',
+    name: { pt: 'Springboot', eng: 'Springboot' },
     level: 7,
-    description: "Framework Java para desenvolvimento de aplicações robustas e escaláveis. Facilita a criação de APIs REST e sistemas backend.",
+    description: {
+      pt: "Framework Java para desenvolvimento de aplicações robustas e escaláveis. Facilita a criação de APIs REST e sistemas backend.",
+      eng: "Java framework for building robust, scalable applications. Simplifies the creation of REST APIs and backend systems."
+    },
     iconName: 'code',
     logoUrl: 'images/icons8-spring-boot-80.png'
   },
   {
     id: 'html',
-    name: 'html',
+    name: { pt: 'html', eng: 'html' },
     level: 6,
-    description: "Linguagem de marcação essencial para estruturar páginas web. Define a organização e o conteúdo das interfaces digitais.",
+    description: {
+      pt: "Linguagem de marcação essencial para estruturar páginas web. Define a organização e o conteúdo das interfaces digitais.",
+      eng: "Essential markup language for structuring web pages. Defines the organization and content of digital interfaces."
+    },
     iconName: 'code',
     logoUrl: 'images/icons8-html-100.png'
   },
   {
     id: 'TailWind',
-    name: 'TailWind',
+    name: { pt: 'TailWind', eng: 'TailWind' },
     level: 7,
-    description: "Framework CSS baseado em classes utilitárias para criação de interfaces modernas e responsivas. Facilita a estilização e permite desenvolver layouts de forma rápida e consistente.",
+    description: {
+      pt: "Framework CSS baseado em classes utilitárias para criação de interfaces modernas e responsivas. Facilita a estilização e permite desenvolver layouts de forma rápida e consistente.",
+      eng: "Utility-class-based CSS framework for building modern, responsive interfaces. Simplifies styling and enables fast, consistent layout development."
+    },
     iconName: 'code',
     logoUrl: 'images/icons8-tailwind-css-96.png'
   }
@@ -62,26 +83,35 @@ export const SKILLS: Skill[] = [
 export const PERKS: Perk[] = [
   {
     id: 'English',
-    name: 'Proficiência na lingua inglesa',
+    name: { pt: 'Proficiência na língua inglesa', eng: 'English Proficiency' },
     rank: 3,
     maxRank: 5,
-    description: "Leitura técnica e comunicação em nível avançado, com fluência em desenvolvimento.",
+    description: {
+      pt: "Leitura técnica e comunicação em nível avançado, com fluência em desenvolvimento.",
+      eng: "Advanced-level technical reading and communication, with fluency in development."
+    },
     iconName: 'MessageCircleMore',
   },
-   {
+  {
     id: 'self-learning',
-    name: 'Aprendizado Contínuo',
+    name: { pt: 'Aprendizado Contínuo', eng: 'Continuous Learning' },
     rank: 4,
     maxRank: 5,
-    description: "Facilidade em absorver novas tecnologias e frameworks de forma autodidata.",
+    description: {
+      pt: "Facilidade em absorver novas tecnologias e frameworks de forma autodidata.",
+      eng: "Quick to pick up new technologies and frameworks through self-study."
+    },
     iconName: 'Glasses',
   },
-   {
+  {
     id: 'teamwork',
-    name: 'Trabalho em equipe',
+    name: { pt: 'Trabalho em equipe', eng: 'Teamwork' },
     rank: 3,
     maxRank: 5,
-    description: "Experiência colaborando em projetos de grupo.",
+    description: {
+      pt: "Experiência colaborando em projetos de grupo.",
+      eng: "Experience collaborating on group projects."
+    },
     iconName: 'Handshake',
   },
 ];

@@ -1,19 +1,19 @@
 
 export interface Skill {
   id: string;
-  name: string;
+  name: {pt: string; eng: string};
   level: number;
-  description: string;
-  iconName: string; // Fallback lucide icon
-  logoUrl?: string; // External logo URL
+  description: {pt: string; eng: string};
+  iconName: string; 
+  logoUrl?: string; 
 }
 
 export interface Perk {
   id: string;
-  name: string;
+  name: {pt: string; eng: string}
   rank: number;
   maxRank: number;
-  description: string;
+  description: {pt: string; eng: string}
   iconName: string;
   issuer?: string;
   link?: string;

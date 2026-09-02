@@ -104,7 +104,8 @@ const StatusView: React.FC = () => {
 }
 
 const SpecialView: React.FC = () => {
-  const { t } = useLanguage();
+  const { language } = useLanguage();
+  const contentLanguage = language === 'en' ? 'eng' : language;
   const [selectedSkill, setSelectedSkill] = useState<Skill>(SKILLS[0]);
 
   const CurrentIcon = IconMap[selectedSkill.iconName] || Shield;
@@ -121,7 +122,7 @@ const SpecialView: React.FC = () => {
               selectedSkill.id === skill.id ? 'bg-pip text-pip-bg' : 'text-pip'
             }`}
           >
-            <span>{skill.name}</span>
+            <span>{skill.name[contentLanguage]}</span>
             <span>{skill.level}</span>
           </button>
         ))}
@@ -133,7 +134,7 @@ const SpecialView: React.FC = () => {
            {selectedSkill.logoUrl ? (
              <img 
                 src={selectedSkill.logoUrl} 
-                alt={selectedSkill.name}
+                alt={selectedSkill.name[contentLanguage]}
                 className="w-32 h-32 sm:w-40 sm:h-40 object-contain animate-pulse-fast drop-shadow-[0_0_8px_rgba(65,255,0,0.8)]"
                 style={{
                   filter: 'brightness(0) saturate(100%) invert(64%) sepia(97%) saturate(1980%) hue-rotate(70deg) brightness(103%) contrast(103%) drop-shadow(0 0 5px rgba(65,255,0,0.8))'
@@ -145,8 +146,8 @@ const SpecialView: React.FC = () => {
         </div>
         
         <div className="w-full text-left">
-           <div className="text-2xl font-bold mb-4 uppercase border-b-2 border-pip pb-1">{selectedSkill.name}</div>
-           <p className="text-lg leading-relaxed opacity-90">{selectedSkill.description}</p>
+           <div className="text-2xl font-bold mb-4 uppercase border-b-2 border-pip pb-1">{selectedSkill.name[contentLanguage]}</div>
+           <p className="text-lg leading-relaxed opacity-90">{selectedSkill.description[contentLanguage]}</p>
         </div>
       </div>
     </div>
@@ -154,7 +155,8 @@ const SpecialView: React.FC = () => {
 };
 
 const PerksView: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const contentLanguage = language === 'en' ? 'eng' : language;
   const [selectedPerk, setSelectedPerk] = useState<Perk>(PERKS[0]);
   const CurrentIcon = IconMap[selectedPerk.iconName] || Shield;
 
@@ -170,7 +172,7 @@ const PerksView: React.FC = () => {
                   selectedPerk.id === perk.id ? 'bg-pip text-pip-bg' : 'text-pip'
                 }`}
               >
-                <span>{perk.name}</span>
+                <span>{perk.name[contentLanguage]}</span>
                 <div className="flex text-sm">
                   {[...Array(perk.maxRank)].map((_, i) => (
                      <span key={i} className={`ml-1 ${i < perk.rank ? 'text-current' : 'opacity-30'}`}>★</span>
@@ -185,7 +187,7 @@ const PerksView: React.FC = () => {
                  <CurrentIcon size={100} className="animate-flicker" />
               </div>
               <div className="w-full border-2 border-pip p-4 bg-pip/5 rounded relative">
-                <h3 className="text-xl font-bold mb-1 border-b border-pip/50 pb-2">{selectedPerk.name}</h3>
+                <h3 className="text-xl font-bold mb-1 border-b border-pip/50 pb-2">{selectedPerk.name[contentLanguage]}</h3>
                 
                 {selectedPerk.issuer && (
                    <div className="text-sm opacity-70 mb-2 uppercase tracking-wide">
@@ -198,7 +200,7 @@ const PerksView: React.FC = () => {
                          <span key={i} className="text-2xl mr-1">{i < selectedPerk.rank ? '★' : '☆'}</span>
                     ))}
                 </div>
-                <p className="text-lg mb-4">{selectedPerk.description}</p>
+                <p className="text-lg mb-4">{selectedPerk.description[contentLanguage]}</p>
                 
                 {selectedPerk.link && (
                     <a 
