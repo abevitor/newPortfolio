@@ -200,10 +200,13 @@ const PipBoy: React.FC = () => {
             </div>
           ))}
         </div>
-        <div className="hidden md:block text-pip text-sm font-bold opacity-80 pt-2 shrink-0 ml-4">
-            PIP-BOY 3000
-        </div>
-        <LanguageToggle />
+        <div className="flex items-center gap-4 shrink-0 ml-4">
+    <div className="hidden md:block text-pip text-sm font-bold opacity-80">
+       
+    </div>
+
+    <LanguageToggle />
+</div>
       </nav>
 
       {/* SUB NAVIGATION */}
