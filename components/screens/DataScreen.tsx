@@ -98,7 +98,7 @@ const QuestsView: React.FC = () => {
 };
 
 const ProjectsView: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
     const [selectedProject, setSelectedProject] = useState<ProjectItem>(PROJECTS[0]);
   
     return (
@@ -123,7 +123,7 @@ const ProjectsView: React.FC = () => {
             >
                <div className="flex items-center gap-2">
                  <Wrench size={16} />
-                 {project.title}
+                 {project.title[language]}
                </div>
             </button>
           ))}
@@ -137,7 +137,7 @@ const ProjectsView: React.FC = () => {
             overflow-y-auto
         ">
            <div className="border-b-2 border-pip mb-4 pb-2 shrink-0">
-             <h2 className="text-xl md:text-2xl font-bold uppercase">{selectedProject.title}</h2>
+             <h2 className="text-xl md:text-2xl font-bold uppercase">{selectedProject.title[language]}</h2>
              <span className="text-sm opacity-60">{t.dataScreen.featuredProject}</span>
            </div>
 
@@ -150,7 +150,7 @@ const ProjectsView: React.FC = () => {
            </div>
 
            <div className="p-4 border-2 border-dashed border-pip/30 rounded bg-pip/5 mb-4 shrink-0">
-               <p className="text-lg leading-relaxed">{selectedProject.description}</p>
+               <p className="text-lg leading-relaxed">{selectedProject.description[language]}</p>
            </div>
            
            <div className="mt-auto flex justify-end pb-4">
@@ -274,7 +274,7 @@ const PdfModal: React.FC<PdfModalProps> = ({url, title, onClose}) => {
 };
 
 const AchievementsView: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
     const [viewingPdf, setViewingPdf] = useState<{ url: string; title: string } | null>(null);
 
     return (
@@ -287,21 +287,21 @@ const AchievementsView: React.FC = () => {
                         </div>
                         <div className="flex-grow">
                             <div className="flex justify-between items-start mb-1">
-                                <h3 className="text-xl font-bold uppercase text-pip">{ach.title}</h3>
+                                <h3 className="text-xl font-bold uppercase text-pip">{ach.title[language]}</h3>
                                 <span className="text-sm border border-pip px-1">{}</span>
                             </div>
                             <div className="flex items-center gap-2 text-sm opacity-70 mb-2">
                                 <Calendar size={14} />
-                                <span>{ach.event}</span>
+                                <span>{ach.event[language]}</span>
                                 <span>•</span>
                                 <span>{ach.date}</span>
                             </div>
-                            <p className="text-lg opacity-90">{ach.description}</p>
+                            <p className="text-lg opacity-90">{ach.description[language]}</p>
 
                             {ach.pdfUrl && (
                               <div className="flex gap-2 mt-4">
                                 <button 
-                                  onClick={() => setViewingPdf({ url: ach.pdfUrl!, title: ach.title })}
+                                  onClick={() => setViewingPdf({ url: ach.pdfUrl!, title: ach.title[language] })}
                                   className="inline-flex items-center gap-2 bg-pip text-black px-4 py-1 text-sm font-bold hover:bg-pip-light transition-colors uppercase"
                                 >
                                   {t.dataScreen.visualizarPdf}
