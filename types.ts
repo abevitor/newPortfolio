@@ -36,19 +36,19 @@ export interface Quest {
 
 export interface ProjectItem {
   id: string;
-  title: string;
+  title: {pt: string; en: string};
   tech: string[];
-  description: string;
+  description: {pt: string; en: string};
   link?: string;
   image?: string;
 }
 
 export interface Achievement {
   id: string;
-  title: string;
-  event: string;
+  title: {pt: string; en: string};
+  event: {pt: string; en: string};
   date: string;
-  description: string;
+  description: {pt: string; en:string};
   pdfUrl?: string;
 }
 

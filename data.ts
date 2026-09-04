@@ -119,51 +119,72 @@ export const PERKS: Perk[] = [
 export const PROJECTS: ProjectItem[] = [
   {
     id: 'p-financeiro',
-    title: 'Sistema financeiro',
-    tech: ['Java', 'Springboot', 'MySQL', 'HTML', 'CSS'], 
-    description: "Sistema full stack de controle financeiro pessoal.",
+    title: { pt: 'Sistema financeiro', en: 'Financial System' },
+    tech: ['Java', 'Springboot', 'MySQL', 'HTML', 'CSS'],
+    description: {
+      pt: "Sistema full stack de controle financeiro pessoal.",
+      en: "Full stack personal finance management system."
+    },
     link: 'https://github.com/abevitor/financeiro'
   },
   {
     id: 'p-java',
-    title: 'Exercicios Java',
+    title: { pt: 'Exercícios Java', en: 'Java Exercises' },
     tech: ['Java'],
-    description: "Exercicios Java.",
+    description: {
+      pt: "Exercícios Java.",
+      en: "Java exercises."
+    },
     link: 'https://github.com/abevitor/JavaSAWS'
   },
   {
     id: 'p-gerenciador-de-tarefas',
-    title: 'Gerenciador de Tarefas',
+    title: { pt: 'Gerenciador de Tarefas', en: 'Task Manager' },
     tech: ['Java', 'Springboot', 'MySQL', 'CSS', 'HTML'],
-    description: "Gerenciador de Tarefas pessoal.",
+    description: {
+      pt: "Gerenciador de Tarefas pessoal.",
+      en: "Personal task manager."
+    },
     link: 'https://github.com/abevitor/ToDoAPIRest'
   },
   {
     id: 'p-sudoku',
-    title: 'Sudoku music player',
+    title: { pt: 'Sudoku music player', en: 'Sudoku Music Player' },
     tech: ['Java'],
-    description: "Sudoku que toca música.",
+    description: {
+      pt: "Sudoku que toca música.",
+      en: "Sudoku that plays music."
+    },
     link: 'https://github.com/abevitor/sudoku'
-  },  
+  },
   {
     id: 'p-login',
-    title: 'Projeto Login',
+    title: { pt: 'Projeto Login', en: 'Login Project' },
     tech: ['Java', 'Springboot', 'CSS', 'HTML'],
-    description: "Projeto Login.",
+    description: {
+      pt: "Projeto Login.",
+      en: "Login project."
+    },
     link: 'https://github.com/abevitor/ApploginGit'
   },
-   {
+  {
     id: 'p-crud',
-    title: 'Projeto CRUD',
+    title: { pt: 'Projeto CRUD', en: 'CRUD Project' },
     tech: ['Java', 'Springboot', 'CSS', 'HTML'],
-    description: "Projeto CRUD.",
+    description: {
+      pt: "Projeto CRUD.",
+      en: "CRUD project."
+    },
     link: 'https://github.com/abevitor/JDBC_DIO'
   },
   {
     id: 'p-Docker',
-    title: 'Projeto Docker',
+    title: { pt: 'Projeto Docker', en: 'Docker Project' },
     tech: ['Java', 'Docker'],
-    description: "Projeto Docker.",
+    description: {
+      pt: "Projeto Docker.",
+      en: "Docker project."
+    },
     link: 'https://github.com/abevitor/Docker_java'
   }
 ];
@@ -171,42 +192,57 @@ export const PROJECTS: ProjectItem[] = [
 export const ACHIEVEMENTS: Achievement[] = [
   {
     id: 'Bootcamp-DIO',
-    title: 'Conclusão BootCamp DIO JAVA',
-    event: 'BootCamp DIO',
+    title: { pt: 'Conclusão BootCamp DIO JAVA', en: 'DIO Java Bootcamp Completion' },
+    event: { pt: 'BootCamp DIO', en: 'DIO Bootcamp' },
     date: '13.08.2025',
-    description: "Finalização do BootCamp com carga horária de 71 horas.",
+    description: {
+      pt: "Finalização do BootCamp com carga horária de 71 horas.",
+      en: "Completion of the Bootcamp with a workload of 71 hours."
+    },
     pdfUrl: 'components/certificados/Bootcamp completo.pdf'
   },
   {
     id: 'certificado-fiap',
-    title: 'Certificado FIAP JAVA',
-    event: 'Cursos FIAP',
+    title: { pt: 'Certificado FIAP JAVA', en: 'FIAP Java Certificate' },
+    event: { pt: 'Cursos FIAP', en: 'FIAP Courses' },
     date: '19.05.2025',
-    description: "Finalização do curso de Java da FIAP com carga horária de 60 horas.",
-    pdfUrl:'components/certificados/fiap.pdf'
+    description: {
+      pt: "Finalização do curso de Java da FIAP com carga horária de 60 horas.",
+      en: "Completion of the FIAP Java course with a workload of 60 hours."
+    },
+    pdfUrl: 'components/certificados/fiap.pdf'
   },
   {
     id: 'Cyberseguranca-CISCO',
-    title: 'Certificado CyberSegurança básica pela CISCO',
-    event: 'Cisco Academy',
+    title: { pt: 'Certificado CyberSegurança básica pela CISCO', en: 'CISCO Basic Cybersecurity Certificate' },
+    event: { pt: 'Cisco Academy', en: 'Cisco Academy' },
     date: '2025',
-    description: "Finalização do curso de Introdução a CyberSegurança pela CISCO.",
-    pdfUrl:'components/certificados/I2CSUpdate20250220-28-paz4p2.pdf'
+    description: {
+      pt: "Finalização do curso de Introdução a CyberSegurança pela CISCO.",
+      en: "Completion of the Introduction to Cybersecurity course by CISCO."
+    },
+    pdfUrl: 'components/certificados/I2CSUpdate20250220-28-paz4p2.pdf'
   },
   {
     id: 'AWS-DIO',
-    title: 'Fundamentos de Cloud com AWS',
-    event:'Cursos DIO',
-    date:'24.07.2026',
-    description:'Finalização do curso de fundamentos de Cloud com AWS pela DIO com carga horária de 48 horas.',
+    title: { pt: 'Fundamentos de Cloud com AWS', en: 'AWS Cloud Fundamentals' },
+    event: { pt: 'Cursos DIO', en: 'DIO Courses' },
+    date: '24.07.2026',
+    description: {
+      pt: "Finalização do curso de fundamentos de Cloud com AWS pela DIO com carga horária de 48 horas.",
+      en: "Completion of the AWS Cloud Fundamentals course by DIO with a workload of 48 hours."
+    },
     pdfUrl: 'components/certificados/AWS_FINAL.pdf'
   },
   {
     id: 'artigo-IA',
-    title: 'IA como ferramenta de insegurança',
-    event:'FATECLOG',
-    date:'2026',
-    description:'Investiga como a Inteligência Artificial transforma a segurança privada via PLN: benefícios como automação, agilidade na análise de dados e apoio à decisão, e limites como ironia, contexto cultural, vieses e impacto no mercado de trabalho — com foco no uso ético de PLNs e IAs.'
+    title: { pt: 'IA como ferramenta de insegurança', en: 'AI as a Tool of Insecurity' },
+    event: { pt: 'FATECLOG', en: 'FATECLOG' },
+    date: '2026',
+    description: {
+      pt: "Investiga como a Inteligência Artificial transforma a segurança privada via PLN: benefícios como automação, agilidade na análise de dados e apoio à decisão, e limites como ironia, contexto cultural, vieses e impacto no mercado de trabalho — com foco no uso ético de PLNs e IAs.",
+      en: "Investigates how Artificial Intelligence transforms private security through NLP: benefits like automation, faster data analysis and decision support, and limitations like irony, cultural context, bias and job market impact — with a focus on the ethical use of NLPs and AI."
+    }
   }
 ];
 
