@@ -47,7 +47,7 @@ export interface Achievement {
   id: string;
   title: {pt: string; en: string};
   event: {pt: string; en: string};
-  date: string;
+  date: {pt: string; en: string};
   description: {pt: string; en:string};
   pdfUrl?: string;
 }

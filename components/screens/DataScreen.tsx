@@ -294,7 +294,7 @@ const AchievementsView: React.FC = () => {
                                 <Calendar size={14} />
                                 <span>{ach.event[language]}</span>
                                 <span>•</span>
-                                <span>{ach.date}</span>
+                                <span>{ach.date[language]}</span>
                             </div>
                             <p className="text-lg opacity-90">{ach.description[language]}</p>
 

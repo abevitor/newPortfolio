@@ -77,6 +77,17 @@ export const SKILLS: Skill[] = [
     },
     iconName: 'code',
     logoUrl: 'images/icons8-tailwind-css-96.png'
+  },
+  {
+    id: 'react',
+    name: { pt: 'React', eng: 'React' },
+    level: 3,    
+    description: {
+       pt: "Biblioteca JavaScript para criação de interfaces de usuário interativas e componentizadas. Facilita o desenvolvimento de aplicações modernas, reutilizáveis e dinâmicas.",
+       eng: "JavaScript library for building interactive and component-based user interfaces. Simplifies the development of modern, reusable, and dynamic applications."
+},
+    iconName: 'code',
+    logoUrl: 'images/react_icon_130845-removebg-preview.png'
   }
 ];
 
@@ -194,7 +205,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     id: 'Bootcamp-DIO',
     title: { pt: 'Conclusão BootCamp DIO JAVA', en: 'DIO Java Bootcamp Completion' },
     event: { pt: 'BootCamp DIO', en: 'DIO Bootcamp' },
-    date: '13.08.2025',
+    date: {pt: '13.08.2025', en: '08.13.2025'},
     description: {
       pt: "Finalização do BootCamp com carga horária de 71 horas.",
       en: "Completion of the Bootcamp with a workload of 71 hours."
@@ -205,7 +216,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     id: 'certificado-fiap',
     title: { pt: 'Certificado FIAP JAVA', en: 'FIAP Java Certificate' },
     event: { pt: 'Cursos FIAP', en: 'FIAP Courses' },
-    date: '19.05.2025',
+    date: {pt: '19.05.2025', en: '05.19.2025'},
     description: {
       pt: "Finalização do curso de Java da FIAP com carga horária de 60 horas.",
       en: "Completion of the FIAP Java course with a workload of 60 hours."
@@ -216,7 +227,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     id: 'Cyberseguranca-CISCO',
     title: { pt: 'Certificado CyberSegurança básica pela CISCO', en: 'CISCO Basic Cybersecurity Certificate' },
     event: { pt: 'Cisco Academy', en: 'Cisco Academy' },
-    date: '2025',
+    date: {pt: '2025', en: '2025'},
     description: {
       pt: "Finalização do curso de Introdução a CyberSegurança pela CISCO.",
       en: "Completion of the Introduction to Cybersecurity course by CISCO."
@@ -227,7 +238,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     id: 'AWS-DIO',
     title: { pt: 'Fundamentos de Cloud com AWS', en: 'AWS Cloud Fundamentals' },
     event: { pt: 'Cursos DIO', en: 'DIO Courses' },
-    date: '24.07.2026',
+    date: {pt: '24.07.2026', en:  '07.24.2026'},
     description: {
       pt: "Finalização do curso de fundamentos de Cloud com AWS pela DIO com carga horária de 48 horas.",
       en: "Completion of the AWS Cloud Fundamentals course by DIO with a workload of 48 hours."
@@ -238,7 +249,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     id: 'artigo-IA',
     title: { pt: 'IA como ferramenta de insegurança', en: 'AI as a Tool of Insecurity' },
     event: { pt: 'FATECLOG', en: 'FATECLOG' },
-    date: '2026',
+    date: {pt:'2026', en:'2026'},
     description: {
       pt: "Investiga como a Inteligência Artificial transforma a segurança privada via PLN: benefícios como automação, agilidade na análise de dados e apoio à decisão, e limites como ironia, contexto cultural, vieses e impacto no mercado de trabalho — com foco no uso ético de PLNs e IAs.",
       en: "Investigates how Artificial Intelligence transforms private security through NLP: benefits like automation, faster data analysis and decision support, and limitations like irony, cultural context, bias and job market impact — with a focus on the ethical use of NLPs and AI."
