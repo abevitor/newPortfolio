@@ -179,7 +179,7 @@ const PipBoy: React.FC = () => {
       
       {/* TOP NAVIGATION */}
       <nav className="flex justify-between items-end border-b-2 border-pip pb-1 mb-2 px-2 sm:px-4 relative z-10">
-        <div className="flex gap-4 sm:gap-8 w-full overflow-x-auto scrollbar-hide">
+        <div className="flex gap-4 sm:gap-8 overflow-x-auto scrollbar-hide">
           {['STAT', 'DATA', 'MAP', 'RADIO'].map((tab) => (
             <div key={tab} className="relative group shrink-0">
               <button
