@@ -54,6 +54,10 @@ const ContactModal: React.FC<ContactModalProps> = ({ onClose}) => {
         setTimeout(() => onClose(), 250);
     };
 
-    
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setFormData(prev => ({...prev, [e.target.name]: e.target.value}));
+    };
+
+
 }
 
