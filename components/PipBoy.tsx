@@ -1,25 +1,33 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MainTab, StatSubTab, DataSubTab } from '../types';
+import { MainTab, StatSubTab, DataSubTab, InvSubTab } from '../types';
 import StatScreen from './screens/StatScreen';
 import DataScreen from './screens/DataScreen';
 import RadioScreen from './screens/RadioScreen';
 import MapScreen from './screens/MapScreen';
 import LanguageToggle from './screens/LanguageToggle';
+import InventoryScreen from './screens/InventoryScreen';
 
 // Navigation Structure
 type Section = {
     tab: MainTab;
-    sub?: StatSubTab | DataSubTab;
+    sub?: StatSubTab | DataSubTab | InvSubTab;
 };
 
 const SECTIONS: Section[] = [
     { tab: 'STAT', sub: 'STATUS' },
     { tab: 'STAT', sub: 'SPECIAL' },
     { tab: 'STAT', sub: 'PERKS' },
+
     { tab: 'DATA', sub: 'QUESTS' },
     { tab: 'DATA', sub: 'PROJECTS' },
     { tab: 'DATA', sub: 'ACHIEVEMENTS' },
+
+    { tab: 'ITEMS', sub: 'WEAPONS' },
+    { tab: 'ITEMS', sub: 'APPAREL' },
+    { tab: 'ITEMS', sub: 'AID' },
+    { tab: 'ITEMS', sub: 'MISC' },
+
     { tab: 'MAP' },
     { tab: 'RADIO' },
 ];
@@ -209,7 +217,7 @@ const PipBoy: React.FC = () => {
 
     // Manual SubTab Click Handler
     const handleSubClick = (
-        sub: StatSubTab | DataSubTab
+        sub: StatSubTab | DataSubTab | InvSubTab
     ) => {
         const index = SECTIONS.findIndex(
             (section) => section.sub === sub
@@ -223,6 +231,33 @@ const PipBoy: React.FC = () => {
     // Render Sub Navigation
     const renderSubNav = () => {
         switch (activeTab) {
+            case 'ITEMS':
+                return (
+                    <div className="flex gap-6 mb-4 text-xl overflow-x-auto scrollbar-hide">
+                        {(
+                            [
+                                'WEAPONS',
+                                'APPAREL',
+                                'AID',
+                                'MISC'
+                            ] as InvSubTab[]
+                        ).map((sub) => (
+                            <button
+                                key={sub}
+                                onClick={() =>
+                                    handleSubClick(sub)
+                                }
+                                className={`uppercase transition-colors whitespace-nowrap ${activeSub === sub
+                                    ? 'text-pip font-bold drop-shadow-[0_0_5px_rgba(65,255,0,0.8)]'
+                                    : 'text-pip/40 hover:text-pip/70'
+                                    }`}
+                            >
+                                {sub}
+                            </button>
+                        ))}
+                    </div>
+                );
+
             case 'STAT':
                 return (
                     <div className="flex gap-6 mb-4 text-xl overflow-x-auto scrollbar-hide">
@@ -238,11 +273,10 @@ const PipBoy: React.FC = () => {
                                 onClick={() =>
                                     handleSubClick(sub)
                                 }
-                                className={`uppercase transition-colors whitespace-nowrap ${
-                                    activeSub === sub
-                                        ? 'text-pip font-bold drop-shadow-[0_0_5px_rgba(65,255,0,0.8)]'
-                                        : 'text-pip/40 hover:text-pip/70'
-                                }`}
+                                className={`uppercase transition-colors whitespace-nowrap ${activeSub === sub
+                                    ? 'text-pip font-bold drop-shadow-[0_0_5px_rgba(65,255,0,0.8)]'
+                                    : 'text-pip/40 hover:text-pip/70'
+                                    }`}
                             >
                                 {sub}
                             </button>
@@ -265,11 +299,10 @@ const PipBoy: React.FC = () => {
                                 onClick={() =>
                                     handleSubClick(sub)
                                 }
-                                className={`uppercase transition-colors whitespace-nowrap ${
-                                    activeSub === sub
-                                        ? 'text-pip font-bold drop-shadow-[0_0_5px_rgba(65,255,0,0.8)]'
-                                        : 'text-pip/40 hover:text-pip/70'
-                                }`}
+                                className={`uppercase transition-colors whitespace-nowrap ${activeSub === sub
+                                    ? 'text-pip font-bold drop-shadow-[0_0_5px_rgba(65,255,0,0.8)]'
+                                    : 'text-pip/40 hover:text-pip/70'
+                                    }`}
                             >
                                 {sub}
                             </button>
@@ -305,6 +338,7 @@ const PipBoy: React.FC = () => {
                         [
                             'STAT',
                             'DATA',
+                            'ITEMS',
                             'MAP',
                             'RADIO',
                         ] as MainTab[]
@@ -317,11 +351,10 @@ const PipBoy: React.FC = () => {
                                 onClick={() =>
                                     handleTabClick(tab)
                                 }
-                                className={`text-xl sm:text-2xl font-bold uppercase px-2 py-1 z-20 relative transition-opacity ${
-                                    activeTab === tab
-                                        ? 'text-pip opacity-100'
-                                        : 'text-pip opacity-50 hover:opacity-80'
-                                }`}
+                                className={`text-xl sm:text-2xl font-bold uppercase px-2 py-1 z-20 relative transition-opacity ${activeTab === tab
+                                    ? 'text-pip opacity-100'
+                                    : 'text-pip opacity-50 hover:opacity-80'
+                                    }`}
                             >
                                 {tab}
                             </button>
@@ -392,6 +425,14 @@ const PipBoy: React.FC = () => {
                             />
                         )}
 
+                        {activeTab === 'ITEMS' && (
+                            <InventoryScreen
+                                activeSubTab={
+                                    activeSub as InvSubTab
+                                }
+                            />
+                        )}
+
                         {activeTab === 'MAP' && (
                             <MapScreen />
                         )}
@@ -435,11 +476,10 @@ const PipBoy: React.FC = () => {
                 <div className="flex items-center gap-2">
 
                     <div
-                        className={`px-1 text-sm transition-colors ${
-                            apCharge > 0
-                                ? 'bg-pip text-black'
-                                : 'text-pip border border-pip'
-                        }`}
+                        className={`px-1 text-sm transition-colors ${apCharge > 0
+                            ? 'bg-pip text-black'
+                            : 'text-pip border border-pip'
+                            }`}
                     >
                         AP
                     </div>

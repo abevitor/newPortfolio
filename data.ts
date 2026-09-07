@@ -93,8 +93,8 @@ export const SKILLS: Skill[] = [
 
 export const PERKS: Perk[] = [
   {
-    id: 'English',
-    name: { pt: 'Proficiência na língua inglesa', eng: 'English Proficiency' },
+    id: 'enlish',
+    name: { pt: 'Proficiência na língua inglesa', eng: 'enlish Proficiency' },
     rank: 3,
     maxRank: 5,
     description: {
@@ -352,8 +352,8 @@ export const QUESTS: Quest[] = [
     title: { pt: 'Análise e Desenvolvimento de Sistemas', en: 'Systems Analysis and Development' },
     summary: { pt: 'FATEC - Carapicuíba', en: 'FATEC - Carapicuíba' },
     description: {
-      pt: "Formação superior em ADS, com foco em desenvolvimento back-end em Java, programação orientada a objetos e boas práticas de engenharia de software.",
-      en: "Bachelor's degree in Systems Analysis and Development, focused on Java back-end development, object-oriented programming and software engineering best practices."
+      pt: "Formação superior em ADS, com foco em desenvolvimento back-end em Java, programação orientada a objetos e boas práticas de enenharia de software.",
+      en: "Bachelor's degree in Systems Analysis and Development, focused on Java back-end development, object-oriented programming and software enineering best practices."
     },
     date: '2023 - 2027',
     status: 'active',
@@ -371,7 +371,7 @@ export const QUESTS: Quest[] = [
         completed: true
       },
       {
-        text: { pt: 'Engenharia de Software', en: 'Software Engineering' },
+        text: { pt: 'enenharia de Software', en: 'Software enineering' },
         completed: true
       },
       {
@@ -391,22 +391,833 @@ export const QUESTS: Quest[] = [
 ];
 
 export const ITEMS: InventoryItem[] = [
+  // =========================================================
+  // WEAPONS
+  // =========================================================
+
   {
-    id: 'i-keyboard',
-    name: 'Mech Keyboard',
-    damage: 15,
-    weight: 2,
-    value: 150,
-    description: "A rugged mechanical input device. Clicky switches cause +5 annoyance to nearby stealth units.",
-    tags: ['Hardware', 'Input']
+    id: 'java',
+    category: 'WEAPONS',
+
+    name: {
+      pt: 'Java',
+      en: 'Java'
+    },
+
+    type: {
+      pt: 'Linguagem de Programação',
+      en: 'Programming Language'
+    },
+
+    level: 90,
+
+    description: {
+      pt: 'Principal linguagem utilizada no desenvolvimento backend. Utilizada na criação de APIs REST, aplicações orientadas a objetos e sistemas robustos.',
+
+      en: 'Main language used for backend development. Used to build REST APIs, object-oriented applications and robust systems.'
+    },
+
+    iconName: 'Code2',
+
+    logoUrl: 'images/226777.png',
+
+    projects: {
+      pt: [
+        'ToDo API',
+        'Financeiro',
+        'AdInsight AI'
+      ],
+
+      en: [
+        'ToDo API',
+        'Financeiro',
+        'AdInsight AI'
+      ]
+    },
+
+    abilities: {
+      pt: [
+        'Programação Orientada a Objetos',
+        'APIs REST',
+        'Collections',
+        'Stream API',
+        'Tratamento de Exceções'
+      ],
+
+      en: [
+        'Object-Oriented Programming',
+        'REST APIs',
+        'Collections',
+        'Stream API',
+        'Exception Handling'
+      ]
+    },
+
+    status: {
+      pt: 'MASTERED',
+      en: 'MASTERED'
+    }
   },
+
   {
-    id: 'i-coffee',
-    name: 'Nuka-Caffeine',
-    damage: 0,
-    weight: 0.5,
-    value: 20,
-    description: "A glowing bottle of high-octane coffee. Restores 50 AP but reduces hydration.",
-    tags: ['Aid', 'Consumable']
+    id: 'spring-boot',
+    category: 'WEAPONS',
+
+    name: {
+      pt: 'Spring Boot',
+      en: 'Spring Boot'
+    },
+
+    type: {
+      pt: 'Framework Backend',
+      en: 'Backend Framework'
+    },
+
+    level: 80,
+
+    description: {
+      pt: 'Framework utilizado para desenvolvimento de aplicações backend e APIs REST em Java, com recursos para segurança, persistência e organização da aplicação.',
+
+      en: 'Framework used to develop Java backend applications and REST APIs, with features for security, persistence and application organization.'
+    },
+
+    iconName: 'Server',
+
+    logoUrl: 'images/icons8-spring-boot-80.png',
+
+    projects: {
+      pt: [
+        'ToDo API',
+        'Financeiro',
+        'AdInsight AI'
+      ],
+
+      en: [
+        'ToDo API',
+        'Financeiro',
+        'AdInsight AI'
+      ]
+    },
+
+    abilities: {
+      pt: [
+        'Spring Data JPA',
+        'Spring Security',
+        'JWT',
+        'APIs REST',
+        'Injeção de Dependência'
+      ],
+
+      en: [
+        'Spring Data JPA',
+        'Spring Security',
+        'JWT',
+        'REST APIs',
+        'Dependency Injection'
+      ]
+    },
+
+    status: {
+      pt: 'MASTERED',
+      en: 'MASTERED'
+    }
+  },
+
+  {
+    id: 'python',
+    category: 'WEAPONS',
+
+    name: {
+      pt: 'Python',
+      en: 'Python'
+    },
+
+    type: {
+      pt: 'Linguagem de Programação',
+      en: 'Programming Language'
+    },
+
+    level: 75,
+
+    description: {
+      pt: 'Linguagem utilizada para automação, desenvolvimento de aplicações e experimentação com Inteligência Artificial.',
+
+      en: 'Language used for automation, application development and experimentation with Artificial Intelligence.'
+    },
+
+    iconName: 'Code2',
+
+    logoUrl: 'images/python-removebg-preview.png',
+
+    projects: {
+      pt: [
+        'Projetos de automação',
+        'Experimentos com IA'
+      ],
+
+      en: [
+        'Automation projects',
+        'AI experiments'
+      ]
+    },
+
+    abilities: {
+      pt: [
+        'Automação',
+        'Programação',
+        'Integração com APIs'
+      ],
+
+      en: [
+        'Automation',
+        'Programming',
+        'API integration'
+      ]
+    },
+
+    status: {
+      pt: 'ADVANCED',
+      en: 'ADVANCED'
+    }
+  },
+
+  {
+    id: 'typescript',
+    category: 'WEAPONS',
+
+    name: {
+      pt: 'TypeScript',
+      en: 'TypeScript'
+    },
+
+    type: {
+      pt: 'Linguagem de Programação',
+      en: 'Programming Language'
+    },
+
+    level: 70,
+
+    description: {
+      pt: 'Superset do JavaScript utilizado neste próprio projeto para adicionar tipagem estática e maior segurança ao desenvolvimento.',
+
+      en: 'JavaScript superset used in this project to provide static typing and safer development.'
+    },
+
+    iconName: 'Braces',
+
+    projects: {
+      pt: [
+        'Pip-Boy Portfolio'
+      ],
+
+      en: [
+        'Pip-Boy Portfolio'
+      ]
+    },
+
+    abilities: {
+      pt: [
+        'Tipagem estática',
+        'Interfaces',
+        'Generics'
+      ],
+
+      en: [
+        'Static typing',
+        'Interfaces',
+        'Generics'
+      ]
+    },
+
+    status: {
+      pt: 'ADVANCED',
+      en: 'ADVANCED'
+    }
+  },
+
+  // =========================================================
+  // APPAREL
+  // =========================================================
+
+  {
+    id: 'react',
+    category: 'APPAREL',
+
+    name: {
+      pt: 'React',
+      en: 'React'
+    },
+
+    type: {
+      pt: 'Biblioteca Frontend',
+      en: 'Frontend Library'
+    },
+
+    level: 60,
+
+    description: {
+      pt: 'Biblioteca utilizada para construção de interfaces componentizadas e interativas.',
+
+      en: 'Library used to build component-based and interactive user interfaces.'
+    },
+
+    iconName: 'Atom',
+
+    logoUrl: 'images/react_icon_130845-removebg-preview.png',
+
+    projects: {
+      pt: [
+        'Pip-Boy Portfolio'
+      ],
+
+      en: [
+        'Pip-Boy Portfolio'
+      ]
+    },
+
+    abilities: {
+      pt: [
+        'Componentes',
+        'Hooks',
+        'State Management'
+      ],
+
+      en: [
+        'Components',
+        'Hooks',
+        'State Management'
+      ]
+    },
+
+    status: {
+      pt: 'LEARNING',
+      en: 'LEARNING'
+    }
+  },
+
+  {
+    id: 'html',
+    category: 'APPAREL',
+
+    name: {
+      pt: 'HTML',
+      en: 'HTML'
+    },
+
+    type: {
+      pt: 'Linguagem de Marcação',
+      en: 'Markup Language'
+    },
+
+    level: 70,
+
+    description: {
+      pt: 'Tecnologia utilizada para estruturar páginas e aplicações web.',
+
+      en: 'Technology used to structure web pages and web applications.'
+    },
+
+    iconName: 'Code2',
+
+    logoUrl: 'images/icons8-html-100.png',
+
+    projects: {
+      pt: [
+        'Projetos Web',
+        'Portfólio'
+      ],
+
+      en: [
+        'Web Projects',
+        'Portfolio'
+      ]
+    },
+
+    abilities: {
+      pt: [
+        'Estrutura semântica',
+        'Formulários',
+        'Acessibilidade'
+      ],
+
+      en: [
+        'Semantic structure',
+        'Forms',
+        'Accessibility'
+      ]
+    },
+
+    status: {
+      pt: 'ADVANCED',
+      en: 'ADVANCED'
+    }
+  },
+
+  {
+    id: 'tailwind',
+    category: 'APPAREL',
+
+    name: {
+      pt: 'Tailwind CSS',
+      en: 'Tailwind CSS'
+    },
+
+    type: {
+      pt: 'Framework CSS',
+      en: 'CSS Framework'
+    },
+
+    level: 70,
+
+    description: {
+      pt: 'Framework baseado em classes utilitárias utilizado para construir interfaces modernas e responsivas.',
+
+      en: 'Utility-class-based CSS framework used to build modern and responsive interfaces.'
+    },
+
+    iconName: 'Palette',
+
+    logoUrl: 'images/icons8-tailwind-css-96.png',
+
+    projects: {
+      pt: [
+        'Pip-Boy Portfolio'
+      ],
+
+      en: [
+        'Pip-Boy Portfolio'
+      ]
+    },
+
+    abilities: {
+      pt: [
+        'Design Responsivo',
+        'Utility Classes',
+        'Dark Themes'
+      ],
+
+      en: [
+        'Responsive Design',
+        'Utility Classes',
+        'Dark Themes'
+      ]
+    },
+
+    status: {
+      pt: 'ADVANCED',
+      en: 'ADVANCED'
+    }
+  },
+
+  // =========================================================
+  // AID
+  // =========================================================
+
+  {
+    id: 'git',
+    category: 'AID',
+
+    name: {
+      pt: 'Git',
+      en: 'Git'
+    },
+
+    type: {
+      pt: 'Controle de Versão',
+      en: 'Version Control'
+    },
+
+    level: 75,
+
+    description: {
+      pt: 'Sistema de controle de versão utilizado para acompanhar alterações, organizar branches e manter o histórico dos projetos.',
+
+      en: 'Version control system used to track changes, organize branches and maintain project history.'
+    },
+
+    iconName: 'GitBranch',
+
+    projects: {
+      pt: [
+        'Projetos acadêmicos',
+        'Projetos pessoais'
+      ],
+
+      en: [
+        'Academic projects',
+        'Personal projects'
+      ]
+    },
+
+    abilities: {
+      pt: [
+        'Commits',
+        'Branches',
+        'Merge',
+        'GitHub'
+      ],
+
+      en: [
+        'Commits',
+        'Branches',
+        'Merge',
+        'GitHub'
+      ]
+    },
+
+    status: {
+      pt: 'ADVANCED',
+      en: 'ADVANCED'
+    }
+  },
+
+  {
+    id: 'github',
+    category: 'AID',
+
+    name: {
+      pt: 'GitHub',
+      en: 'GitHub'
+    },
+
+    type: {
+      pt: 'Plataforma de Desenvolvimento',
+      en: 'Development Platform'
+    },
+
+    level: 75,
+
+    description: {
+      pt: 'Plataforma utilizada para hospedagem dos projetos, versionamento e colaboração.',
+
+      en: 'Platform used for project hosting, version control and collaboration.'
+    },
+
+    iconName: 'Github',
+
+    projects: {
+      pt: [
+        'Pip-Boy Portfolio',
+        'Projetos Java'
+      ],
+
+      en: [
+        'Pip-Boy Portfolio',
+        'Java Projects'
+      ]
+    },
+
+    abilities: {
+      pt: [
+        'Repositories',
+        'Pull Requests',
+        'Versionamento'
+      ],
+
+      en: [
+        'Repositories',
+        'Pull Requests',
+        'Version Control'
+      ]
+    },
+
+    status: {
+      pt: 'ADVANCED',
+      en: 'ADVANCED'
+    }
+  },
+
+  {
+    id: 'mysql',
+    category: 'AID',
+
+    name: {
+      pt: 'MySQL',
+      en: 'MySQL'
+    },
+
+    type: {
+      pt: 'Banco de Dados',
+      en: 'Database'
+    },
+
+    level: 75,
+
+    description: {
+      pt: 'Sistema de gerenciamento de banco de dados relacional utilizado em aplicações backend.',
+
+      en: 'Relational database management system used in backend applications.'
+    },
+
+    iconName: 'Database',
+
+    logoUrl: 'images/sql-removebg-preview (1).png',
+
+    projects: {
+      pt: [
+        'ToDo API',
+        'Financeiro'
+      ],
+
+      en: [
+        'ToDo API',
+        'Financeiro'
+      ]
+    },
+
+    abilities: {
+      pt: [
+        'SQL',
+        'CRUD',
+        'Relacionamentos',
+        'Normalização'
+      ],
+
+      en: [
+        'SQL',
+        'CRUD',
+        'Relationships',
+        'Normalization'
+      ]
+    },
+
+    status: {
+      pt: 'ADVANCED',
+      en: 'ADVANCED'
+    }
+  },
+
+  {
+    id: 'postman',
+    category: 'AID',
+
+    name: {
+      pt: 'Postman',
+      en: 'Postman'
+    },
+
+    type: {
+      pt: 'API Platform',
+      en: 'API Platform'
+    },
+
+    level: 70,
+
+    description: {
+      pt: 'Ferramenta utilizada para testar, documentar e validar APIs REST.',
+
+      en: 'Tool used to test, document and validate REST APIs.'
+    },
+
+    iconName: 'Send',
+
+    projects: {
+      pt: [
+        'ToDo API',
+        'Financeiro'
+      ],
+
+      en: [
+        'ToDo API',
+        'Financeiro'
+      ]
+    },
+
+    abilities: {
+      pt: [
+        'Requisições HTTP',
+        'Testes de API',
+        'Headers',
+        'JSON'
+      ],
+
+      en: [
+        'HTTP Requests',
+        'API Testing',
+        'Headers',
+        'JSON'
+      ]
+    },
+
+    status: {
+      pt: 'ADVANCED',
+      en: 'ADVANCED'
+    }
+  },
+
+  // =========================================================
+  // MISC
+  // =========================================================
+
+  {
+    id: 'aws',
+    category: 'MISC',
+
+    name: {
+      pt: 'AWS',
+      en: 'AWS'
+    },
+
+    type: {
+      pt: 'Cloud Computing',
+      en: 'Cloud Computing'
+    },
+
+    level: 45,
+
+    description: {
+      pt: 'Conhecimentos teóricos em computação em nuvem, incluindo serviços como EC2, S3, RDS, IAM e VPC.',
+
+      en: 'Theoretical knowledge of cloud computing, including services such as EC2, S3, RDS, IAM and VPC.'
+    },
+
+    iconName: 'Cloud',
+
+    logoUrl: 'images/aws.png',
+
+    projects: {
+      pt: [
+        'Estudos de Cloud Computing'
+      ],
+
+      en: [
+        'Cloud Computing Studies'
+      ]
+    },
+
+    abilities: {
+      pt: [
+        'EC2',
+        'S3',
+        'RDS',
+        'IAM',
+        'VPC'
+      ],
+
+      en: [
+        'EC2',
+        'S3',
+        'RDS',
+        'IAM',
+        'VPC'
+      ]
+    },
+
+    status: {
+      pt: 'LEARNING',
+      en: 'LEARNING'
+    }
+  },
+
+  {
+    id: 'linux',
+    category: 'MISC',
+
+    name: {
+      pt: 'Linux',
+      en: 'Linux'
+    },
+
+    type: {
+      pt: 'Sistema Operacional',
+      en: 'Operating System'
+    },
+
+    level: 55,
+
+    description: {
+      pt: 'Conhecimentos de administração e utilização de sistemas Linux, incluindo terminal, arquivos, permissões e processos.',
+
+      en: 'Knowledge of Linux administration and usage, including terminal, files, permissions and processes.'
+    },
+
+    iconName: 'Terminal',
+
+    projects: {
+      pt: [
+        'Estudos de Sistemas Operacionais'
+      ],
+
+      en: [
+        'Operating Systems Studies'
+      ]
+    },
+
+    abilities: {
+      pt: [
+        'Terminal',
+        'Permissões',
+        'Processos',
+        'Sistema de Arquivos'
+      ],
+
+      en: [
+        'Terminal',
+        'Permissions',
+        'Processes',
+        'File System'
+      ]
+    },
+
+    status: {
+      pt: 'LEARNING',
+      en: 'LEARNING'
+    }
+  },
+
+  {
+    id: 'cybersecurity',
+    category: 'MISC',
+
+    name: {
+      pt: 'Cybersecurity',
+      en: 'Cybersecurity'
+    },
+
+    type: {
+      pt: 'Segurança da Informação',
+      en: 'Information Security'
+    },
+
+    level: 50,
+
+    description: {
+      pt: 'Conhecimentos fundamentais de segurança da informação, autenticação, proteção de sistemas e conceitos de segurança em aplicações.',
+
+      en: 'Fundamental knowledge of information security, authentication, system protection and application security concepts.'
+    },
+
+    iconName: 'ShieldCheck',
+
+    projects: {
+      pt: [
+        'Estudos de Cibersegurança'
+      ],
+
+      en: [
+        'Cybersecurity Studies'
+      ]
+    },
+
+    abilities: {
+      pt: [
+        'Autenticação',
+        'JWT',
+        'Boas práticas de segurança',
+        'Conceitos de redes'
+      ],
+
+      en: [
+        'Authentication',
+        'JWT',
+        'Security best practices',
+        'Networking concepts'
+      ]
+    },
+
+    status: {
+      pt: 'LEARNING',
+      en: 'LEARNING'
+    }
   }
 ];

@@ -54,16 +54,47 @@ export interface Achievement {
 
 export interface InventoryItem {
   id: string;
-  name: string;
-  damage: number;
-  weight: number;
-  value: number;
-  description: string;
-  tags: string[];
+  category: InvSubTab;
+
+  name: {
+    pt: string;
+    en: string;
+  };
+
+  type: {
+    pt: string;
+    en: string;
+  };
+
+  level: number;
+
+  description: {
+    pt: string;
+    en: string;
+  };
+
+  iconName: string;
+
+  logoUrl?: string;
+
+  projects?: {
+    pt: string[];
+    en: string[];
+  };
+
+  abilities?: {
+    pt: string[];
+    en: string[];
+  };
+
+  status: {
+    pt: string;
+    en: string;
+  };
 }
 
 // Navigation Types
-export type MainTab = 'STAT' | 'DATA' | 'MAP' | 'RADIO';
+export type MainTab = 'STAT' | 'DATA' | 'ITEMS' | 'MAP' | 'RADIO';
 export type StatSubTab = 'STATUS' | 'SPECIAL' | 'PERKS';
 export type DataSubTab = 'QUESTS' | 'PROJECTS' | 'ACHIEVEMENTS'; 
 export type InvSubTab = 'WEAPONS' | 'APPAREL' | 'AID' | 'MISC';
