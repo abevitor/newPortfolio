@@ -423,15 +423,14 @@ export const ITEMS: InventoryItem[] = [
 
     projects: {
       pt: [
-        'ToDo API',
-        'Financeiro',
-        'AdInsight AI'
+        'Sudoku',
+        'Exercícios Java',
+        
       ],
 
       en: [
-        'ToDo API',
-        'Financeiro',
-        'AdInsight AI'
+        'Sudoku',
+        'Java Exersices'
       ]
     },
 
@@ -489,13 +488,13 @@ export const ITEMS: InventoryItem[] = [
       pt: [
         'ToDo API',
         'Financeiro',
-        'AdInsight AI'
+        'Projeto Login'
       ],
 
       en: [
         'ToDo API',
-        'Financeiro',
-        'AdInsight AI'
+        'Finances',
+        'Login Project'
       ]
     },
 
@@ -537,7 +536,7 @@ export const ITEMS: InventoryItem[] = [
       en: 'Programming Language'
     },
 
-    level: 75,
+    level: 50,
 
     description: {
       pt: 'Linguagem utilizada para automação, desenvolvimento de aplicações e experimentação com Inteligência Artificial.',
@@ -551,12 +550,10 @@ export const ITEMS: InventoryItem[] = [
 
     projects: {
       pt: [
-        'Projetos de automação',
         'Experimentos com IA'
       ],
 
       en: [
-        'Automation projects',
         'AI experiments'
       ]
     },
@@ -595,7 +592,7 @@ export const ITEMS: InventoryItem[] = [
       en: 'Programming Language'
     },
 
-    level: 70,
+    level: 10,
 
     description: {
       pt: 'Superset do JavaScript utilizado neste próprio projeto para adicionar tipagem estática e maior segurança ao desenvolvimento.',
@@ -653,7 +650,7 @@ export const ITEMS: InventoryItem[] = [
       en: 'Frontend Library'
     },
 
-    level: 60,
+    level: 20,
 
     description: {
       pt: 'Biblioteca utilizada para construção de interfaces componentizadas e interativas.',
@@ -709,7 +706,7 @@ export const ITEMS: InventoryItem[] = [
       en: 'Markup Language'
     },
 
-    level: 70,
+    level: 60,
 
     description: {
       pt: 'Tecnologia utilizada para estruturar páginas e aplicações web.',
@@ -827,7 +824,7 @@ export const ITEMS: InventoryItem[] = [
       en: 'Version Control'
     },
 
-    level: 75,
+    level: 45,
 
     description: {
       pt: 'Sistema de controle de versão utilizado para acompanhar alterações, organizar branches e manter o histórico dos projetos.',
@@ -885,7 +882,7 @@ export const ITEMS: InventoryItem[] = [
       en: 'Development Platform'
     },
 
-    level: 75,
+    level: 60,
 
     description: {
       pt: 'Plataforma utilizada para hospedagem dos projetos, versionamento e colaboração.',
@@ -941,7 +938,7 @@ export const ITEMS: InventoryItem[] = [
       en: 'Database'
     },
 
-    level: 75,
+    level: 40,
 
     description: {
       pt: 'Sistema de gerenciamento de banco de dados relacional utilizado em aplicações backend.',
@@ -1001,7 +998,7 @@ export const ITEMS: InventoryItem[] = [
       en: 'API Platform'
     },
 
-    level: 70,
+    level: 30,
 
     description: {
       pt: 'Ferramenta utilizada para testar, documentar e validar APIs REST.',
@@ -1063,7 +1060,7 @@ export const ITEMS: InventoryItem[] = [
       en: 'Cloud Computing'
     },
 
-    level: 45,
+    level: 30,
 
     description: {
       pt: 'Conhecimentos teóricos em computação em nuvem, incluindo serviços como EC2, S3, RDS, IAM e VPC.',
@@ -1123,7 +1120,7 @@ export const ITEMS: InventoryItem[] = [
       en: 'Operating System'
     },
 
-    level: 55,
+    level: 35,
 
     description: {
       pt: 'Conhecimentos de administração e utilização de sistemas Linux, incluindo terminal, arquivos, permissões e processos.',
@@ -1204,7 +1201,7 @@ export const ITEMS: InventoryItem[] = [
         'Autenticação',
         'JWT',
         'Boas práticas de segurança',
-        'Conceitos de redes'
+       
       ],
 
       en: [
