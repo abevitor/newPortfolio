@@ -27,7 +27,7 @@ const ORBITAL_CONTACTS = [
   }
 ];
 
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/SEU_ID_AQUI'; // <- troque pelo seu endpoint
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mnpqgabn'; 
 
 type FormStatus = 'idle' | 'sending' | 'success' | 'error';
 
