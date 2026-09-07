@@ -81,6 +81,12 @@ const ContactModal: React.FC<ContactModalProps> = ({ onClose}) => {
         }
     };
 
-
+    useEffect(() => {
+        if (status === 'sucess' || status === 'error') {
+            const timer = setTimeout(() => setStatus('idle'), 4000);
+            return () => clearTimeout(timer);
+        }
+    }, [status]);
+    
 }
 
