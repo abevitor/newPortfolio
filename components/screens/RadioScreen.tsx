@@ -41,7 +41,19 @@ const ContactModal: React.FC<ContactModalProps> = ({ onClose}) => {
     const [formData, setFormData] = useState({ name: '', email: '', message: ''});
 
     useEffect(() => {
-        const handleKey = (e: Key)
-    })
+        const handleKey = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') handleClose();
+        };
+        window.addEventListener('keydown', handleKey);
+        return () => window.removeEventListener('keydown', handleKey);
+
+    }, []);
+
+    const handleClose = () => {
+        setIsClosing(true);
+        setTimeout(() => onClose(), 250);
+    };
+
+    
 }
 
