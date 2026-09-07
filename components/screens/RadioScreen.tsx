@@ -58,6 +58,29 @@ const ContactModal: React.FC<ContactModalProps> = ({ onClose}) => {
         setFormData(prev => ({...prev, [e.target.name]: e.target.value}));
     };
 
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setStatus('sending');
+
+        try {
+            const response = await fetch(FORMSPREE_ENDPOINT, {
+                method: 'POST',
+                headers: {'Accept': 'application/json', 'Content=-Type': 'application/json'},
+                body: JSON. stringify(formData),
+            });
+
+            if (response.ok) {
+                setStatus('sucess');
+                setFormData({name: '', email: '', message: ''});
+
+            } else {
+                setStatus('error');
+            }
+        } catch {
+            setStatus('error')
+        }
+    };
+
 
 }
 
