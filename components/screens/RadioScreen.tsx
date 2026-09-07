@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Github, Linkedin, Radio, Signal } from 'lucide-react';
+import { Github, Linkedin, Radio, Signal, X } from 'lucide-react';
 import { useLanguage } from '../../i18n/LanguageContext';
 
 const ORBIT_RADIUS = 130;
@@ -28,7 +28,7 @@ const ORBITAL_CONTACTS = [
 ];
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/SEU_ID_AQUI';
-type FormStatus = 'idle' | 'sending' | 'sucess' | 'error';
+type FormStatus = 'idle' | 'sending' | 'success' | 'error';
 
 interface ContactModalProps  {
     onClose: () => void;
@@ -70,7 +70,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ onClose}) => {
             });
 
             if (response.ok) {
-                setStatus('sucess');
+                setStatus('success');
                 setFormData({name: '', email: '', message: ''});
 
             } else {
@@ -82,11 +82,96 @@ const ContactModal: React.FC<ContactModalProps> = ({ onClose}) => {
     };
 
     useEffect(() => {
-        if (status === 'sucess' || status === 'error') {
+        if (status === 'success' || status === 'error') {
             const timer = setTimeout(() => setStatus('idle'), 4000);
             return () => clearTimeout(timer);
         }
     }, [status]);
-    
+    return (
+    <div
+      className={`fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm ${
+        isClosing ? 'animate-backdrop-out' : 'animate-backdrop-in'
+      }`}
+      onClick={handleClose}
+    >
+      <div
+        className={`relative w-full max-w-md bg-pip-bg border-2 border-pip shadow-[0_0_30px_rgba(65,255,0,0.3)] flex flex-col ${
+          isClosing ? 'animate-modal-out' : 'animate-modal-in'
+        }`}
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Header */}
+        <div className="flex items-center justify-between border-b-2 border-pip px-4 py-2 shrink-0">
+          <div className="flex items-center gap-2 text-pip font-mono uppercase tracking-widest">
+            <Radio size={18} />
+            <span className="text-sm sm:text-base">{t.contactForm.title}</span>
+          </div>
+          <button
+            onClick={handleClose}
+            className="text-pip hover:bg-pip hover:text-black p-1 transition-colors"
+            aria-label={language === 'pt' ? 'Fechar' : 'Close'}
+          >
+            <X size={20} />
+          </button>
+        </div>
+
+        {/* Form */}
+        <form onSubmit={handleSubmit} className="p-4 space-y-3 font-mono">
+          {/* Honeypot anti-spam field — invisible to humans, bots tend to fill it */}
+          <input
+            type="text"
+            name="_gotcha"
+            tabIndex={-1}
+            autoComplete="off"
+            style={{ position: 'absolute', left: '-9999px' }}
+            aria-hidden="true"
+          />
+
+          <input
+            type="text"
+            name="name"
+            placeholder={t.contactForm.name}
+            value={formData.name}
+            onChange={handleChange}
+            required
+            disabled={status === 'sending'}
+            className="w-full bg-black border border-pip/50 px-3 py-2 text-sm uppercase text-pip placeholder:text-pip/40 focus:outline-none focus:border-pip focus:shadow-[0_0_8px_rgba(65,255,0,0.3)] transition-all disabled:opacity-50"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder={t.contactForm.email}
+            value={formData.email}
+            onChange={handleChange}
+            required
+            disabled={status === 'sending'}
+            className="w-full bg-black border border-pip/50 px-3 py-2 text-sm uppercase text-pip placeholder:text-pip/40 focus:outline-none focus:border-pip focus:shadow-[0_0_8px_rgba(65,255,0,0.3)] transition-all disabled:opacity-50"
+          />
+          <textarea
+            name="message"
+            placeholder={t.contactForm.message}
+            value={formData.message}
+            onChange={handleChange}
+            required
+            disabled={status === 'sending'}
+            rows={4}
+            className="w-full bg-black border border-pip/50 px-3 py-2 text-sm uppercase text-pip placeholder:text-pip/40 focus:outline-none focus:border-pip focus:shadow-[0_0_8px_rgba(65,255,0,0.3)] transition-all resize-none disabled:opacity-50"
+          />
+
+          <button
+            type="submit"
+            disabled={status === 'sending'}
+            className="w-full flex items-center justify-center gap-2 bg-pip text-black py-2 font-bold uppercase tracking-widest hover:bg-pip-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            {status === 'sending' && <>{t.contactForm.sending}</>}
+            {status === 'success' && <><CheckCircle size={16} /> {t.contactForm.success}</>}
+            {status === 'error' && <><XCircle size={16} /> {t.contactForm.error}</>}
+            {status === 'idle' && <><Send size={16} /> {t.contactForm.send}</>}
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+        
 }
 
