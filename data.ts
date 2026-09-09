@@ -625,7 +625,7 @@ export const ITEMS: InventoryItem[] = [
 
     iconName: 'Code2',
 
-    logoUrl: `${import.meta.env.BASE_URL}images/icons8-html-100.png`,
+    logoUrl: `${import.meta.env.BASE_URL}images/htmlicon-removebg-preview.png`,
 
     projects: {
       pt: [
@@ -683,7 +683,7 @@ export const ITEMS: InventoryItem[] = [
 
     iconName: 'Palette',
 
-    logoUrl: `${import.meta.env.BASE_URL}images/icons8-tailwind-css-96.png`,
+    logoUrl: `${import.meta.env.BASE_URL}images/images-removebg-preview.png`,
 
     projects: {
       pt: [
