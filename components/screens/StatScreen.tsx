@@ -32,8 +32,7 @@ import {
 
 import { useLanguage } from '@/i18n/LanguageContext';
 
-const PROGRAMMER_BOY_URL =
-  "/images/fallout_significado_vault_boy_thumbs_up__4ybskp0-removebg-preview.png";
+const PROGRAMMER_BOY_URL = `${import.meta.env.BASE_URL}images/fallout_significado_vault_boy_thumbs_up__4ybskp0-removebg-preview.png`
 
 interface StatScreenProps {
   activeSubTab: StatSubTab;
