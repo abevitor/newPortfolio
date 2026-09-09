@@ -264,7 +264,6 @@ const PipBoy: React.FC = () => {
                         {(
                             [
                                 'STATUS',
-                                'SPECIAL',
                                 'PERKS',
                             ] as StatSubTab[]
                         ).map((sub) => (
