@@ -1,95 +1,4 @@
-import { Skill, Perk, Quest, InventoryItem, ProjectItem, Achievement } from './types';
-
-export const SKILLS: Skill[] = [
-  {
-    id: 'java',
-    name: { pt: 'Java', eng: 'Java' },
-    level: 9,
-    description: {
-      pt: "Linguagem orientada a objetos conhecida por sua robustez e portabilidade. Amplamente utilizada no desenvolvimento de aplicações e sistemas backend.",
-      eng: "Object-oriented language known for its robustness and portability. Widely used in application and backend systems development."
-    },
-    iconName: 'Code',
-    logoUrl: 'images/226777.png'
-  },
-  {
-    id: 'python',
-    name: { pt: 'Python', eng: 'Python' },
-    level: 8,
-    description: {
-      pt: "Linguagem versátil e conhecida pela simplicidade e legibilidade. Muito utilizada em automação, análise de dados e desenvolvimento de aplicações.",
-      eng: "Versatile language known for its simplicity and readability. Widely used in automation, data analysis and application development."
-    },
-    iconName: 'Code',
-    logoUrl: 'images/python-removebg-preview.png'
-  },
-  {
-    id: 'aws',
-    name: { pt: 'AWS', eng: 'AWS' },
-    level: 9,
-    description: {
-      pt: "Plataforma de computação em nuvem com diversos serviços para infraestrutura e aplicações. Permite criar soluções escaláveis, seguras e flexíveis.",
-      eng: "Cloud computing platform with a wide range of infrastructure and application services. Enables scalable, secure and flexible solutions."
-    },
-    iconName: 'Plataform',
-    logoUrl: 'images/aws.png'
-  },
-  {
-    id: 'mySQL',
-    name: { pt: 'mySQL', eng: 'mySQL' },
-    level: 8,
-    description: {
-      pt: "Sistema de gerenciamento de banco de dados relacional conhecido por desempenho e confiabilidade. Utilizado para armazenar e organizar dados de aplicações.",
-      eng: "Relational database management system known for performance and reliability. Used to store and organize application data."
-    },
-    iconName: 'database',
-    logoUrl: 'images/sql-removebg-preview (1).png'
-  },
-  {
-    id: 'Springboot',
-    name: { pt: 'Springboot', eng: 'Springboot' },
-    level: 7,
-    description: {
-      pt: "Framework Java para desenvolvimento de aplicações robustas e escaláveis. Facilita a criação de APIs REST e sistemas backend.",
-      eng: "Java framework for building robust, scalable applications. Simplifies the creation of REST APIs and backend systems."
-    },
-    iconName: 'code',
-    logoUrl: 'images/icons8-spring-boot-80.png'
-  },
-  {
-    id: 'html',
-    name: { pt: 'html', eng: 'html' },
-    level: 6,
-    description: {
-      pt: "Linguagem de marcação essencial para estruturar páginas web. Define a organização e o conteúdo das interfaces digitais.",
-      eng: "Essential markup language for structuring web pages. Defines the organization and content of digital interfaces."
-    },
-    iconName: 'code',
-    logoUrl: 'images/icons8-html-100.png'
-  },
-  {
-    id: 'TailWind',
-    name: { pt: 'TailWind', eng: 'TailWind' },
-    level: 7,
-    description: {
-      pt: "Framework CSS baseado em classes utilitárias para criação de interfaces modernas e responsivas. Facilita a estilização e permite desenvolver layouts de forma rápida e consistente.",
-      eng: "Utility-class-based CSS framework for building modern, responsive interfaces. Simplifies styling and enables fast, consistent layout development."
-    },
-    iconName: 'code',
-    logoUrl: 'images/icons8-tailwind-css-96.png'
-  },
-  {
-    id: 'react',
-    name: { pt: 'React', eng: 'React' },
-    level: 3,    
-    description: {
-       pt: "Biblioteca JavaScript para criação de interfaces de usuário interativas e componentizadas. Facilita o desenvolvimento de aplicações modernas, reutilizáveis e dinâmicas.",
-       eng: "JavaScript library for building interactive and component-based user interfaces. Simplifies the development of modern, reusable, and dynamic applications."
-},
-    iconName: 'code',
-    logoUrl: 'images/react_icon_130845-removebg-preview.png'
-  }
-];
+import { Perk, Quest, InventoryItem, ProjectItem, Achievement } from './types';
 
 export const PERKS: Perk[] = [
   {
@@ -210,7 +119,7 @@ export const ACHIEVEMENTS: Achievement[] = [
       pt: "Finalização do BootCamp com carga horária de 71 horas.",
       en: "Completion of the Bootcamp with a workload of 71 hours."
     },
-    pdfUrl: 'components/certificados/Bootcamp completo.pdf'
+    pdfUrl: `${import.meta.env.BASE_URL}components/certificados/Bootcamp completo.pdf`
   },
   {
     id: 'certificado-fiap',
@@ -221,7 +130,7 @@ export const ACHIEVEMENTS: Achievement[] = [
       pt: "Finalização do curso de Java da FIAP com carga horária de 60 horas.",
       en: "Completion of the FIAP Java course with a workload of 60 hours."
     },
-    pdfUrl: 'components/certificados/fiap.pdf'
+    pdfUrl: `${import.meta.env.BASE_URL}components/certificados/fiap.pdf`
   },
   {
     id: 'Cyberseguranca-CISCO',
@@ -232,7 +141,7 @@ export const ACHIEVEMENTS: Achievement[] = [
       pt: "Finalização do curso de Introdução a CyberSegurança pela CISCO.",
       en: "Completion of the Introduction to Cybersecurity course by CISCO."
     },
-    pdfUrl: 'components/certificados/I2CSUpdate20250220-28-paz4p2.pdf'
+    pdfUrl: `${import.meta.env.BASE_URL}components/certificados/I2CSUpdate20250220-28-paz4p2.pdf`
   },
   {
     id: 'AWS-DIO',
@@ -243,7 +152,7 @@ export const ACHIEVEMENTS: Achievement[] = [
       pt: "Finalização do curso de fundamentos de Cloud com AWS pela DIO com carga horária de 48 horas.",
       en: "Completion of the AWS Cloud Fundamentals course by DIO with a workload of 48 hours."
     },
-    pdfUrl: 'components/certificados/AWS_FINAL.pdf'
+    pdfUrl: `${import.meta.env.BASE_URL}components/certificados/AWS_FINAL.pdf`
   },
   {
     id: 'artigo-IA',
@@ -419,7 +328,7 @@ export const ITEMS: InventoryItem[] = [
 
     iconName: 'Code2',
 
-    logoUrl: 'images/226777.png',
+    logoUrl: `${import.meta.env.BASE_URL}images/226777.png`,
 
     projects: {
       pt: [
@@ -482,7 +391,7 @@ export const ITEMS: InventoryItem[] = [
 
     iconName: 'Server',
 
-    logoUrl: 'images/icons8-spring-boot-80.png',
+    logoUrl: `${import.meta.env.BASE_URL}images/icons8-spring-boot-80.png`,
 
     projects: {
       pt: [
@@ -546,7 +455,7 @@ export const ITEMS: InventoryItem[] = [
 
     iconName: 'Code2',
 
-    logoUrl: 'images/python-removebg-preview.png',
+    logoUrl: `${import.meta.env.BASE_URL}images/python-removebg-preview.png`,
 
     projects: {
       pt: [
@@ -660,7 +569,7 @@ export const ITEMS: InventoryItem[] = [
 
     iconName: 'Atom',
 
-    logoUrl: 'images/react_icon_130845-removebg-preview.png',
+    logoUrl: `${import.meta.env.BASE_URL}images/react_icon_130845-removebg-preview.png`,
 
     projects: {
       pt: [
@@ -716,7 +625,7 @@ export const ITEMS: InventoryItem[] = [
 
     iconName: 'Code2',
 
-    logoUrl: 'images/icons8-html-100.png',
+    logoUrl: `${import.meta.env.BASE_URL}images/icons8-html-100.png`,
 
     projects: {
       pt: [
@@ -774,7 +683,7 @@ export const ITEMS: InventoryItem[] = [
 
     iconName: 'Palette',
 
-    logoUrl: 'images/icons8-tailwind-css-96.png',
+    logoUrl: `${import.meta.env.BASE_URL}images/icons8-tailwind-css-96.png`,
 
     projects: {
       pt: [
@@ -948,7 +857,7 @@ export const ITEMS: InventoryItem[] = [
 
     iconName: 'Database',
 
-    logoUrl: 'images/sql-removebg-preview (1).png',
+    logoUrl: `${import.meta.env.BASE_URL}images/sql-removebg-preview (1).png`,
 
     projects: {
       pt: [
@@ -1070,7 +979,7 @@ export const ITEMS: InventoryItem[] = [
 
     iconName: 'Cloud',
 
-    logoUrl: 'images/aws.png',
+    logoUrl: `${import.meta.env.BASE_URL}images/aws.png`,
 
     projects: {
       pt: [
