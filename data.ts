@@ -1,3 +1,4 @@
+import { m } from 'framer-motion';
 import { Perk, Quest, InventoryItem, ProjectItem, Achievement } from './types';
 
 export const PERKS: Perk[] = [
@@ -37,6 +38,16 @@ export const PERKS: Perk[] = [
 ];
 
 export const PROJECTS: ProjectItem[] = [
+  {
+    id: 'y96tube',
+    title: { pt: 'Sistema de download de videos', en: 'Video Download System' },
+    tech: ['Java', 'CSS'],
+    description: {
+      pt: "Sistema para download de mp4 e mp3 via links do youtube",
+      en: "System to download mp4 and mp3 via youtube links."
+    },
+    link: 'https://github.com/abevitor/y96tube'
+  },
   {
     id: 'p-financeiro',
     title: { pt: 'Sistema financeiro', en: 'Financial System' },
