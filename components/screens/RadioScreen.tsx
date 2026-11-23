@@ -37,7 +37,7 @@ const ORBITAL_CONTACTS = [
     id: 'resume',
     name: 'CURRÍCULO',
     icon: FileText,
-    link: `${import.meta.env.BASE_URL}certificados/curriculo_vitor(1).pdf`,
+    link: `${import.meta.env.BASE_URL}certificados/curriculo.pdf`,
     angle: 0,
   },
   {

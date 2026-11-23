@@ -130,7 +130,7 @@ export const ACHIEVEMENTS: Achievement[] = [
       pt: "Finalização do BootCamp com carga horária de 71 horas.",
       en: "Completion of the Bootcamp with a workload of 71 hours."
     },
-    pdfUrl: `${import.meta.env.BASE_URL}components/certificados/Bootcamp completo.pdf`
+    pdfUrl: `${import.meta.env.BASE_URL}certificados/Bootcamp_completo.pdf`
   },
   {
     id: 'certificado-fiap',
@@ -141,7 +141,7 @@ export const ACHIEVEMENTS: Achievement[] = [
       pt: "Finalização do curso de Java da FIAP com carga horária de 60 horas.",
       en: "Completion of the FIAP Java course with a workload of 60 hours."
     },
-    pdfUrl: `${import.meta.env.BASE_URL}components/certificados/fiap.pdf`
+    pdfUrl: `${import.meta.env.BASE_URL}certificados/fiap.pdf`
   },
   {
     id: 'Cyberseguranca-CISCO',
@@ -152,7 +152,7 @@ export const ACHIEVEMENTS: Achievement[] = [
       pt: "Finalização do curso de Introdução a CyberSegurança pela CISCO.",
       en: "Completion of the Introduction to Cybersecurity course by CISCO."
     },
-    pdfUrl: `${import.meta.env.BASE_URL}components/certificados/I2CSUpdate20250220-28-paz4p2.pdf`
+    pdfUrl: `${import.meta.env.BASE_URL}certificados/I2CSUpdate20250220-28-paz4p2.pdf`
   },
   {
     id: 'AWS-DIO',
@@ -163,7 +163,7 @@ export const ACHIEVEMENTS: Achievement[] = [
       pt: "Finalização do curso de fundamentos de Cloud com AWS pela DIO com carga horária de 48 horas.",
       en: "Completion of the AWS Cloud Fundamentals course by DIO with a workload of 48 hours."
     },
-    pdfUrl: `${import.meta.env.BASE_URL}components/certificados/AWS_FINAL.pdf`
+    pdfUrl: `${import.meta.env.BASE_URL}certificados/AWS_FINAL.pdf`
   },
   {
     id: 'artigo-IA',
